@@ -6,6 +6,7 @@ import {
   FaHashtag,
   FaChartLine,
   FaTerminal,
+  FaMarkdown,
 } from 'react-icons/fa';
 
 function Home() {
@@ -50,6 +51,12 @@ function Home() {
         description: 'Generate cURL commands for API requests',
         path: '/tools/curl-generator',
         icon: <FaTerminal />,
+      },
+      {
+        name: 'Markdown to HTML',
+        description: 'Convert Markdown text to HTML',
+        path: '/tools/markdown-to-html',
+        icon: <FaMarkdown />,
       },
     ],
     'Social Media Tools': [

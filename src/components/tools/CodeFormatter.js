@@ -157,6 +157,53 @@ function CodeFormatter() {
             </button>
           </div>
         </div>
+
+        {/* Informational Content */}
+        <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
+          <h2 className="text-2xl font-semibold mb-4">Format Your Code Instantly with Our Code Formatter</h2>
+          <p className="mb-4">
+            Writing clean and well-structured code is essential for readability and maintainability. Our <strong>code formatter</strong> helps you instantly format your code, ensuring proper indentation, consistent styling, and enhanced clarity.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Why Use Our Code Formatter?</h3>
+          <p className="mb-4">
+            Our <strong>online code beautifier</strong> is designed to streamline your coding workflow. With just a few clicks, you can:
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Automatically format messy or unstructured code</li>
+            <li>Improve code readability and maintain consistency</li>
+            <li>Reduce syntax errors caused by improper indentation</li>
+            <li>Support multiple programming languages</li>
+          </ul>
+          <h3 className="text-xl font-semibold mb-2">How to Use the Code Formatter</h3>
+          <p className="mb-4">
+            Using our code formatter is simple:
+          </p>
+          <ol className="list-decimal pl-6 mb-4">
+            <li>Paste your code into the input field.</li>
+            <li>Select your programming language.</li>
+            <li>Click the "Format" button.</li>
+            <li>Instantly get well-structured, readable code.</li>
+          </ol>
+          <p className="mb-4">
+            This tool is perfect for developers, students, and professionals looking to maintain clean code without the hassle of manual formatting.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Explore More Developer Tools</h3>
+          <p className="mb-4">
+            Enhance your coding and financial planning with our additional tools:
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li><strong><a href="/#/tools/tax-calculator" className="text-indigo-600 hover:underline">Tax Calculator</a></strong> – Quickly estimate your tax liability.</li>
+            <li><strong><a href="/#/tools/mortgage-calculator" className="text-indigo-600 hover:underline">Mortgage Calculator</a></strong> – Plan your home loan effectively.</li>
+            <li><strong><a href="/#/tools/investment-calculator" className="text-indigo-600 hover:underline">Investment Calculator</a></strong> – Calculate potential investment returns over time.</li>
+          </ul>
+          <p className="mb-4">
+            By using these tools together, you can create a well-rounded financial plan that maximizes your investments and minimizes financial risks.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Start Formatting Your Code Now!</h3>
+          <p>
+            Don't waste time manually fixing code structure. Use our <strong>code formatter</strong> to instantly enhance your code's readability and maintain professional coding standards. Try it now and explore our other helpful tools!
+          </p>
+        </div>
       </div>
     </div>
   );

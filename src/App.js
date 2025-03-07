@@ -13,6 +13,7 @@ import JsonValidator from './components/tools/JsonValidator';
 import CurlGenerator from './components/tools/CurlGenerator';
 import SocialMediaAnalyzer from './components/tools/SocialMediaAnalyzer';
 import HashtagGenerator from './components/tools/HashtagGenerator';
+import MarkdownToHtml from './components/tools/MarkdownToHtml';
 
 // Import pages
 import TermsAndConditions from './components/pages/TermsAndConditions';
@@ -36,6 +37,7 @@ function App() {
               <Route path="/tools/curl-generator" element={<CurlGenerator />} />
               <Route path="/tools/social-media-analyzer" element={<SocialMediaAnalyzer />} />
               <Route path="/tools/hashtag-generator" element={<HashtagGenerator />} />
+              <Route path="/tools/markdown-to-html" element={<MarkdownToHtml />} />
               
               {/* Pages */}
               <Route path="/terms" element={<TermsAndConditions />} />

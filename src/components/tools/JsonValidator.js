@@ -127,6 +127,50 @@ function JsonValidator() {
             )}
           </div>
         </div>
+
+        {/* Informational Content */}
+        <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
+          <h2 className="text-2xl font-semibold mb-4">Validate and Format JSON Effortlessly with Our JSON Validator</h2>
+          <p className="mb-4">
+            Working with JSON data can be tricky, especially when dealing with complex structures. Our <strong>JSON validator</strong> helps you validate and format JSON data quickly and accurately.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Why Use Our JSON Validator?</h3>
+          <p className="mb-4">
+            Our tool is designed to simplify your JSON data handling. With just a few clicks, you can:
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Validate JSON data for syntax errors</li>
+            <li>Format JSON for better readability</li>
+            <li>Ensure your JSON is ready for API requests</li>
+          </ul>
+          <h3 className="text-xl font-semibold mb-2">How to Use the JSON Validator</h3>
+          <p className="mb-4">
+            Using our JSON validator is simple:
+          </p>
+          <ol className="list-decimal pl-6 mb-4">
+            <li>Paste your JSON data into the input field.</li>
+            <li>Click the "Validate" button to check for errors.</li>
+            <li>View the formatted JSON output for easy reading.</li>
+          </ol>
+          <p className="mb-4">
+            This tool is perfect for developers and data analysts who work with JSON data regularly.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Explore More Developer Tools</h3>
+          <p className="mb-4">
+            Enhance your development workflow with our additional tools:
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li><strong><a href="/#/tools/code-formatter" className="text-indigo-600 hover:underline">Code Formatter</a></strong> – Instantly format and beautify your code.</li>
+            <li><strong><a href="/#/tools/curl-generator" className="text-indigo-600 hover:underline">cURL Generator</a></strong> – Generate cURL commands for API requests.</li>
+          </ul>
+          <p className="mb-4">
+            By using these tools together, you can improve your coding efficiency and maintain high-quality code standards.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Start Validating JSON Now!</h3>
+          <p>
+            Ensure your JSON data is error-free and well-formatted. Use our <strong>JSON validator</strong> to streamline your data handling. Try it now and explore our other developer tools!
+          </p>
+        </div>
       </div>
     </div>
   );

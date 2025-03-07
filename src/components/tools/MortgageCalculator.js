@@ -115,7 +115,29 @@ function MortgageCalculator() {
           </form>
         </div>
 
-        {/* Informational Content */}
+
+
+        {result && (
+          <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
+            <h2 className={`text-xl font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+              Results
+            </h2>
+            <div className="space-y-4">
+              <div>
+                <p className="text-sm font-medium">Monthly Payment</p>
+                <p className="text-2xl font-bold text-indigo-600">${result.monthlyPayment}</p>
+              </div>
+              <div>
+                <p className="text-sm font-medium">Total Payment</p>
+                <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>${result.totalPayment}</p>
+              </div>
+              <div>
+                <p className="text-sm font-medium">Total Interest</p>
+                <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>${result.totalInterest}</p>
+              </div>
+            </div>
+          </div>
+        )}        {/* Informational Content */}
         <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
           <h2 className="text-2xl font-semibold mb-4">Easily Estimate Your Home Loan with Our Mortgage Calculator</h2>
           <p className="mb-4">
@@ -147,8 +169,8 @@ function MortgageCalculator() {
             To gain a better understanding of your finances, check out our other helpful tools:
           </p>
           <ul className="list-disc pl-6 mb-4">
-            <li><strong><a href="/tools/tax-calculator" className="text-indigo-600 hover:underline">Tax Calculator</a></strong> – Estimate your tax liability and maximize savings.</li>
-            <li><strong><a href="/tools/investment-calculator" className="text-indigo-600 hover:underline">Investment Calculator</a></strong> – Plan your investments and track potential returns.</li>
+            <li><strong><a href="/#/tools/tax-calculator" className="text-indigo-600 hover:underline">Tax Calculator</a></strong> – Estimate your tax liability and maximize savings.</li>
+            <li><strong><a href="/#/tools/investment-calculator" className="text-indigo-600 hover:underline">Investment Calculator</a></strong> – Plan your investments and track potential returns.</li>
           </ul>
           <p className="mb-4">
             Using these tools together, you can make informed decisions about your home purchase and overall financial strategy.
@@ -158,28 +180,6 @@ function MortgageCalculator() {
             Take the guesswork out of mortgage planning. Use our <strong>mortgage calculator</strong> to estimate your payments and confidently move forward with your home-buying journey. Try it now and explore our other financial tools for better financial management.
           </p>
         </div>
-
-        {result && (
-          <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
-            <h2 className={`text-xl font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-              Results
-            </h2>
-            <div className="space-y-4">
-              <div>
-                <p className="text-sm font-medium">Monthly Payment</p>
-                <p className="text-2xl font-bold text-indigo-600">${result.monthlyPayment}</p>
-              </div>
-              <div>
-                <p className="text-sm font-medium">Total Payment</p>
-                <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>${result.totalPayment}</p>
-              </div>
-              <div>
-                <p className="text-sm font-medium">Total Interest</p>
-                <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>${result.totalInterest}</p>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

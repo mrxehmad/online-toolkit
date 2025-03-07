@@ -120,8 +120,31 @@ function InvestmentCalculator() {
           </form>
         </div>
 
-        {/* Informational Content */}
-        <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
+
+
+        {result && (
+          <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
+            <h2 className={`text-xl font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+              Investment Projection
+            </h2>
+            <div className="space-y-4">
+              <div>
+                <p className="text-sm font-medium">Future Value</p>
+                <p className="text-2xl font-bold text-indigo-600">${result.futureValue}</p>
+              </div>
+              <div>
+                <p className="text-sm font-medium">Total Contributions</p>
+                <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>${result.totalContributions}</p>
+              </div>
+              <div>
+                <p className="text-sm font-medium">Total Interest Earned</p>
+                <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>${result.totalInterest}</p>
+              </div>
+            </div>
+          </div>
+        )}
+                {/* Informational Content */}
+                <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
           <h2 className="text-2xl font-semibold mb-4">Maximize Your Wealth with Our Investment Calculator</h2>
           <p className="mb-4">
             Investing is a powerful way to grow your wealth over time, but understanding potential returns is essential for making informed financial decisions. Our <strong>investment calculator</strong> helps you estimate the future value of your investments based on your contributions, expected returns, and investment timeframe.
@@ -154,8 +177,8 @@ function InvestmentCalculator() {
             For a complete financial strategy, try our other helpful calculators:
           </p>
           <ul className="list-disc pl-6 mb-4">
-            <li><strong><a href="/tools/tax-calculator" className="text-indigo-600 hover:underline">Tax Calculator</a></strong> – Estimate your tax liability and optimize your savings.</li>
-            <li><strong><a href="/tools/mortgage-calculator" className="text-indigo-600 hover:underline">Mortgage Calculator</a></strong> – Plan your home loan and monthly payments effectively.</li>
+            <li><strong><a href="/#/tools/tax-calculator" className="text-indigo-600 hover:underline">Tax Calculator</a></strong> – Estimate your tax liability and optimize your savings.</li>
+            <li><strong><a href="/#/tools/mortgage-calculator" className="text-indigo-600 hover:underline">Mortgage Calculator</a></strong> – Plan your home loan and monthly payments effectively.</li>
           </ul>
           <p className="mb-4">
             By using these tools together, you can create a well-rounded financial plan that maximizes your investments and minimizes financial risks.
@@ -165,28 +188,6 @@ function InvestmentCalculator() {
             Take control of your financial future. Use our <strong>investment calculator</strong> to estimate your potential returns and make smarter investment decisions. Try it now and explore our other financial planning tools!
           </p>
         </div>
-
-        {result && (
-          <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
-            <h2 className={`text-xl font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-              Investment Projection
-            </h2>
-            <div className="space-y-4">
-              <div>
-                <p className="text-sm font-medium">Future Value</p>
-                <p className="text-2xl font-bold text-indigo-600">${result.futureValue}</p>
-              </div>
-              <div>
-                <p className="text-sm font-medium">Total Contributions</p>
-                <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>${result.totalContributions}</p>
-              </div>
-              <div>
-                <p className="text-sm font-medium">Total Interest Earned</p>
-                <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>${result.totalInterest}</p>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

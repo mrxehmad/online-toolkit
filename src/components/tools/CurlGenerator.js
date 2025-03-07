@@ -334,6 +334,51 @@ function CurlGenerator() {
             {generateCurl()}
           </pre>
         </div>
+
+        {/* Informational Content */}
+        <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
+          <h2 className="text-2xl font-semibold mb-4">Generate cURL Commands Effortlessly with Our cURL Generator</h2>
+          <p className="mb-4">
+            Crafting cURL commands manually can be tedious and error-prone. Our <strong>cURL generator</strong> simplifies this process, allowing you to create accurate cURL commands for your API requests with ease.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Why Use Our cURL Generator?</h3>
+          <p className="mb-4">
+            Our tool is designed to streamline your API testing and development workflow. With just a few inputs, you can:
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Generate cURL commands for various HTTP methods</li>
+            <li>Include headers, authentication, and request body</li>
+            <li>Copy the generated command to your clipboard for easy use</li>
+          </ul>
+          <h3 className="text-xl font-semibold mb-2">How to Use the cURL Generator</h3>
+          <p className="mb-4">
+            Using our cURL generator is simple:
+          </p>
+          <ol className="list-decimal pl-6 mb-4">
+            <li>Enter the API endpoint URL.</li>
+            <li>Select the HTTP method and add any necessary headers.</li>
+            <li>Include authentication details and request body if needed.</li>
+            <li>Click the "Generate" button to create your cURL command.</li>
+          </ol>
+          <p className="mb-4">
+            This tool is perfect for developers and testers who need to interact with APIs efficiently.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Explore More Developer Tools</h3>
+          <p className="mb-4">
+            Enhance your development workflow with our additional tools:
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li><strong><a href="/#/tools/code-formatter" className="text-indigo-600 hover:underline">Code Formatter</a></strong> – Instantly format and beautify your code.</li>
+            <li><strong><a href="/#/tools/json-validator" className="text-indigo-600 hover:underline">JSON Validator</a></strong> – Validate and format JSON data with ease.</li>
+          </ul>
+          <p className="mb-4">
+            By using these tools together, you can improve your coding efficiency and maintain high-quality code standards.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Start Generating cURL Commands Now!</h3>
+          <p>
+            Simplify your API interactions with our <strong>cURL generator</strong>. Try it now and explore our other developer tools to enhance your productivity!
+          </p>
+        </div>
       </div>
     </div>
   );

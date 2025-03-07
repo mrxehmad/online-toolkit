@@ -8,8 +8,8 @@ function Navbar() {
 
   const categories = {
     'Social': ['/tools/social-media-analyzer', '/tools/hashtag-generator'],
-    'Finance': ['/tools/mortgage-calculator', '/tools/investment-calculator', 'tools/tax-calculator'],
-    'Developers': ['/tools/code-formatter', '/tools/json-validator', '/tools/curl-generator'],
+    'Finance': ['/tools/mortgage-calculator', '/tools/investment-calculator', '/tools/tax-calculator'],
+    'Developers': ['/tools/code-formatter', '/tools/json-validator', '/tools/curl-generator', '/tools/markdown-to-html'],
   };
 
   return (
