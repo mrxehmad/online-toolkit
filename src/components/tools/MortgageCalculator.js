@@ -115,6 +115,50 @@ function MortgageCalculator() {
           </form>
         </div>
 
+        {/* Informational Content */}
+        <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
+          <h2 className="text-2xl font-semibold mb-4">Easily Estimate Your Home Loan with Our Mortgage Calculator</h2>
+          <p className="mb-4">
+            Buying a home is one of the biggest financial decisions you'll make, and understanding your mortgage payments is crucial. Our <strong>mortgage calculator</strong> helps you estimate your monthly payments, including principal and interest, so you can plan your budget effectively.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Why Use Our Mortgage Calculator?</h3>
+          <p className="mb-4">
+            Our <strong>home loan calculator</strong> is designed to provide accurate estimates based on your loan details. With just a few inputs, you can:
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Calculate your monthly mortgage payments</li>
+            <li>See how interest rates impact your loan</li>
+            <li>Plan ahead for down payments and closing costs</li>
+          </ul>
+          <h3 className="text-xl font-semibold mb-2">How to Use the Mortgage Calculator</h3>
+          <p className="mb-4">
+            Using our mortgage calculator is simple:
+          </p>
+          <ol className="list-decimal pl-6 mb-4">
+            <li>Enter your loan amount.</li>
+            <li>Input your interest rate and loan term.</li>
+            <li>The calculator will instantly estimate your monthly payment.</li>
+          </ol>
+          <p className="mb-4">
+            This tool allows you to compare different loan scenarios and choose the best option for your financial goals.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Explore More Financial Planning Tools</h3>
+          <p className="mb-4">
+            To gain a better understanding of your finances, check out our other helpful tools:
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li><strong><a href="/tools/tax-calculator" className="text-indigo-600 hover:underline">Tax Calculator</a></strong> – Estimate your tax liability and maximize savings.</li>
+            <li><strong><a href="/tools/investment-calculator" className="text-indigo-600 hover:underline">Investment Calculator</a></strong> – Plan your investments and track potential returns.</li>
+          </ul>
+          <p className="mb-4">
+            Using these tools together, you can make informed decisions about your home purchase and overall financial strategy.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Start Planning Your Home Purchase Today!</h3>
+          <p>
+            Take the guesswork out of mortgage planning. Use our <strong>mortgage calculator</strong> to estimate your payments and confidently move forward with your home-buying journey. Try it now and explore our other financial tools for better financial management.
+          </p>
+        </div>
+
         {result && (
           <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
             <h2 className={`text-xl font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>

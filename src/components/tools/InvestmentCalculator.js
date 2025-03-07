@@ -120,6 +120,52 @@ function InvestmentCalculator() {
           </form>
         </div>
 
+        {/* Informational Content */}
+        <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
+          <h2 className="text-2xl font-semibold mb-4">Maximize Your Wealth with Our Investment Calculator</h2>
+          <p className="mb-4">
+            Investing is a powerful way to grow your wealth over time, but understanding potential returns is essential for making informed financial decisions. Our <strong>investment calculator</strong> helps you estimate the future value of your investments based on your contributions, expected returns, and investment timeframe.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Why Use Our Investment Calculator?</h3>
+          <p className="mb-4">
+            Our <strong>return-on-investment calculator</strong> allows you to project how your money can grow over time. By entering key financial details, you can:
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>See how your initial investment and monthly contributions accumulate</li>
+            <li>Understand the impact of compound interest</li>
+            <li>Compare different investment scenarios to make the best decision</li>
+          </ul>
+          <h3 className="text-xl font-semibold mb-2">How to Use the Investment Calculator</h3>
+          <p className="mb-4">
+            Using our investment calculator is simple:
+          </p>
+          <ol className="list-decimal pl-6 mb-4">
+            <li>Enter your <strong>initial investment</strong> amount.</li>
+            <li>Input your <strong>monthly contribution</strong>.</li>
+            <li>Specify your <strong>expected annual return</strong> percentage.</li>
+            <li>Select your <strong>investment timeframe</strong> in years.</li>
+            <li>The calculator will instantly estimate your potential investment growth.</li>
+          </ol>
+          <p className="mb-4">
+            With this tool, you can visualize how your money works for you and create a long-term financial plan.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Plan Your Finances with Additional Tools</h3>
+          <p className="mb-4">
+            For a complete financial strategy, try our other helpful calculators:
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li><strong><a href="/tools/tax-calculator" className="text-indigo-600 hover:underline">Tax Calculator</a></strong> – Estimate your tax liability and optimize your savings.</li>
+            <li><strong><a href="/tools/mortgage-calculator" className="text-indigo-600 hover:underline">Mortgage Calculator</a></strong> – Plan your home loan and monthly payments effectively.</li>
+          </ul>
+          <p className="mb-4">
+            By using these tools together, you can create a well-rounded financial plan that maximizes your investments and minimizes financial risks.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Start Growing Your Investments Today!</h3>
+          <p>
+            Take control of your financial future. Use our <strong>investment calculator</strong> to estimate your potential returns and make smarter investment decisions. Try it now and explore our other financial planning tools!
+          </p>
+        </div>
+
         {result && (
           <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
             <h2 className={`text-xl font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>

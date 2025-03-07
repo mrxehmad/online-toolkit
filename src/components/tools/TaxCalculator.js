@@ -208,6 +208,50 @@ function TaxCalculator() {
           </form>
         </div>
 
+        {/* Informational Content */}
+        <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
+          <h2 className="text-2xl font-semibold mb-4">Maximize Your Savings with Our Online Tax Calculator</h2>
+          <p className="mb-4">
+            Understanding your tax obligations can be complicated, but with our easy-to-use <strong>tax calculator</strong>, you can quickly estimate your tax liability and plan your finances accordingly. Whether you're a salaried employee, self-employed, or a business owner, our tool helps simplify tax calculations and ensures you're prepared for tax season.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Why Use Our Tax Calculator?</h3>
+          <p className="mb-4">
+            Our <strong>online tax calculator</strong> is designed to provide accurate tax estimates based on the latest tax rates and regulations. By entering your income details, deductions, and credits, you can:
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Get a quick estimate of your taxable income and tax liability</li>
+            <li>Identify potential tax deductions and savings</li>
+            <li>Plan your finances efficiently to avoid unexpected tax burdens</li>
+          </ul>
+          <h3 className="text-xl font-semibold mb-2">How to Use the Tax Calculator</h3>
+          <p className="mb-4">
+            Using our tax calculator is simple:
+          </p>
+          <ol className="list-decimal pl-6 mb-4">
+            <li>Enter your annual income.</li>
+            <li>Input any applicable deductions and credits.</li>
+            <li>The calculator will instantly provide an estimate of your tax liability.</li>
+          </ol>
+          <p className="mb-4">
+            This allows you to make informed decisions about your tax payments and savings strategies.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Related Financial Tools for Better Planning</h3>
+          <p className="mb-4">
+            To optimize your financial strategy, consider using our other financial calculators:
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li><strong><a href="/tools/investment-calculator" className="text-indigo-600 hover:underline">Investment Calculator</a></strong> – Plan your investments and see potential growth over time.</li>
+            <li><strong><a href="/tools/mortgage-calculator" className="text-indigo-600 hover:underline">Mortgage Calculator</a></strong> – Estimate your monthly mortgage payments and total loan costs.</li>
+          </ul>
+          <p className="mb-4">
+            By using these tools together, you can create a comprehensive financial plan that minimizes your tax burden while maximizing your savings and investments.
+          </p>
+          <h3 className="text-xl font-semibold mb-2">Start Calculating Today!</h3>
+          <p>
+            Don't let taxes overwhelm you. Use our <strong>tax calculator</strong> to gain clarity on your tax liability and take control of your financial future. Try it now and explore our other financial tools to make smarter money decisions.
+          </p>
+        </div>
+
         {result && (
           <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6`}>
             <h2 className={`text-xl font-semibold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
