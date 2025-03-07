@@ -45,15 +45,13 @@ function ContactUs() {
               <div>
                 <h3 className="font-medium mb-2">Email</h3>
                 <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  support@toolkit-website.com
+                  contact@ehmad.site
                 </p>
               </div>
               <div>
                 <h3 className="font-medium mb-2">Location</h3>
                 <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  123 Tool Street<br />
-                  Web City, IN 12345<br />
-                  United States
+                  Cloud<br />
                 </p>
               </div>
               <div>
