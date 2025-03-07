@@ -9,7 +9,7 @@ function Navbar() {
   const categories = {
     'Social': ['/tools/social-media-analyzer', '/tools/hashtag-generator'],
     'Finance': ['/tools/mortgage-calculator', '/tools/investment-calculator'],
-    'Developers': ['/tools/code-formatter', '/tools/json-validator'],
+    'Developers': ['/tools/code-formatter', '/tools/json-validator', '/tools/curl-generator'],
   };
 
   return (

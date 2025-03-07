@@ -22,7 +22,7 @@ import ContactUs from './components/pages/ContactUs';
 function App() {
   return (
     <ThemeProvider>
-      <Router basename="/">
+      <Router>
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-grow">
