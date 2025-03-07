@@ -53,7 +53,7 @@ The application will be available at `http://localhost:3000`
 
 ## 🌐 Live Demo
 
-Visit [Online Toolkit](https://ehmad.site/toolkit) to see the live version.
+Visit [Online Toolkit](https://tools.ehmad.site/) to see the live version.
 
 ## 🎨 Features
 
