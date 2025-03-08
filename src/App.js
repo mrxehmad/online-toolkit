@@ -14,6 +14,7 @@ import CurlGenerator from './components/tools/CurlGenerator';
 import SocialMediaAnalyzer from './components/tools/SocialMediaAnalyzer';
 import HashtagGenerator from './components/tools/HashtagGenerator';
 import MarkdownToHtml from './components/tools/MarkdownToHtml';
+import NetIncomeTaxCalculator from './components/tools/NetIncomeTaxCalculator';
 
 // Import pages
 import TermsAndConditions from './components/pages/TermsAndConditions';
@@ -48,6 +49,7 @@ function App() {
               <Route path="/social-media-analyzer" element={<SocialMediaAnalyzer />} />
               <Route path="/hashtag-generator" element={<HashtagGenerator />} />
               <Route path="/markdown-to-html" element={<MarkdownToHtml />} />
+              <Route path="/net-income-tax-calculator" element={<NetIncomeTaxCalculator />} />
               
               {/* Pages */}
               <Route path="/terms" element={<TermsAndConditions />} />

@@ -9,10 +9,7 @@ function Navbar() {
 
   const categories = {
     'Social': ['/social-media-analyzer', '/hashtag-generator'],
-    'Finance': ['/mortgage-calculator', '/investment-calculator', '/tax-calculator'],
-    'Finance Tools': [
-      { name: 'Net Income Tax Calculator', path: '/net-income-tax-calculator', icon: <NetIncomeTaxCalculatorIcon /> },
-    ],
+    'Finance': ['/mortgage-calculator', '/investment-calculator', '/tax-calculator', '/net-income-tax-calculator'],
     'Developers': ['/code-formatter', '/json-validator', '/curl-generator', '/markdown-to-html'],
   };
 
@@ -53,7 +50,7 @@ function Navbar() {
                       to={path}
                       className={`block px-4 py-2 text-sm ${darkMode ? 'text-gray-300 hover:text-white hover:bg-gray-600' : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-100'}`}
                     >
-                      {path.split('/').pop().split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ').replace('Curl', 'cURL')}
+                      {typeof path === 'string' ? path.split('/').pop().split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ').replace('Curl', 'cURL') : ''}
                     </Link>
                   ))}
                 </div>

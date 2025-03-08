@@ -6,13 +6,15 @@ function NetIncomeTaxCalculator() {
   const [income, setIncome] = useState('');
   const [taxRate, setTaxRate] = useState('');
   const [netIncome, setNetIncome] = useState(null);
+  const [taxAmount, setTaxAmount] = useState(null);
 
   const calculateNetIncome = () => {
     const incomeValue = parseFloat(income);
     const taxRateValue = parseFloat(taxRate) / 100;
     if (!isNaN(incomeValue) && !isNaN(taxRateValue)) {
-      const taxAmount = incomeValue * taxRateValue;
-      setNetIncome(incomeValue - taxAmount);
+      const calculatedTaxAmount = incomeValue * taxRateValue;
+      setTaxAmount(calculatedTaxAmount);
+      setNetIncome(incomeValue - calculatedTaxAmount);
     }
   };
 
@@ -50,9 +52,11 @@ function NetIncomeTaxCalculator() {
             Calculate Net Income
           </button>
 
-          {netIncome !== null && (
+          {netIncome !== null && taxAmount !== null && (
             <div className="mt-4 text-lg">
               <strong>Net Income: </strong>${netIncome.toFixed(2)}
+              <br />
+              <strong>Tax Amount: </strong>${taxAmount.toFixed(2)}
             </div>
           )}
         </div>
