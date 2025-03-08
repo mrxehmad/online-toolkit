@@ -1,8 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
+import { useEffect } from 'react';
 
 // Import tool components
 import MortgageCalculator from './components/tools/MortgageCalculator';
@@ -15,16 +16,28 @@ import SocialMediaAnalyzer from './components/tools/SocialMediaAnalyzer';
 import HashtagGenerator from './components/tools/HashtagGenerator';
 import MarkdownToHtml from './components/tools/MarkdownToHtml';
 import NetIncomeTaxCalculator from './components/tools/NetIncomeTaxCalculator';
+import NotFound from './components/NotFound';
 
 // Import pages
 import TermsAndConditions from './components/pages/TermsAndConditions';
 import PrivacyPolicy from './components/pages/PrivacyPolicy';
 import ContactUs from './components/pages/ContactUs';
 
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop />
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-grow">
@@ -50,7 +63,7 @@ function App() {
               <Route path="/hashtag-generator" element={<HashtagGenerator />} />
               <Route path="/markdown-to-html" element={<MarkdownToHtml />} />
               <Route path="/net-income-tax-calculator" element={<NetIncomeTaxCalculator />} />
-              
+              <Route path="*" element={<NotFound />} />
               {/* Pages */}
               <Route path="/terms" element={<TermsAndConditions />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
