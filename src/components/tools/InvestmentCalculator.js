@@ -177,8 +177,8 @@ function InvestmentCalculator() {
             For a complete financial strategy, try our other helpful calculators:
           </p>
           <ul className="list-disc pl-6 mb-4">
-            <li><strong><a href="/#/tools/tax-calculator" className="text-indigo-600 hover:underline">Tax Calculator</a></strong> – Estimate your tax liability and optimize your savings.</li>
-            <li><strong><a href="/#/tools/mortgage-calculator" className="text-indigo-600 hover:underline">Mortgage Calculator</a></strong> – Plan your home loan and monthly payments effectively.</li>
+            <li><strong><a href="/tax-calculator" className="text-indigo-600 hover:underline">Tax Calculator</a></strong> – Estimate your tax liability and optimize your savings.</li>
+            <li><strong><a href="/mortgage-calculator" className="text-indigo-600 hover:underline">Mortgage Calculator</a></strong> – Plan your home loan and monthly payments effectively.</li>
           </ul>
           <p className="mb-4">
             By using these tools together, you can create a well-rounded financial plan that maximizes your investments and minimizes financial risks.

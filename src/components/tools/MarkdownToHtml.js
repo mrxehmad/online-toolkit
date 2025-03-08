@@ -209,7 +209,7 @@ function MarkdownToHtml() {
             <li>
               <strong>
                 <a
-                  href="/#/tools/tools/json-validator"
+                  href="tools/json-validator"
                   className="text-indigo-600 hover:underline"
                 >
                   JSON Validator
@@ -220,7 +220,7 @@ function MarkdownToHtml() {
             <li>
               <strong>
                 <a
-                  href="/#/tools/curl-generator"
+                  href="/curl-generator"
                   className="text-indigo-600 hover:underline"
                 >
                   Curl Generator

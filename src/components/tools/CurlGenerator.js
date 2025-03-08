@@ -368,8 +368,8 @@ function CurlGenerator() {
             Enhance your development workflow with our additional tools:
           </p>
           <ul className="list-disc pl-6 mb-4">
-            <li><strong><a href="/#/tools/code-formatter" className="text-indigo-600 hover:underline">Code Formatter</a></strong> – Instantly format and beautify your code.</li>
-            <li><strong><a href="/#/tools/json-validator" className="text-indigo-600 hover:underline">JSON Validator</a></strong> – Validate and format JSON data with ease.</li>
+            <li><strong><a href="/code-formatter" className="text-indigo-600 hover:underline">Code Formatter</a></strong> – Instantly format and beautify your code.</li>
+            <li><strong><a href="/json-validator" className="text-indigo-600 hover:underline">JSON Validator</a></strong> – Validate and format JSON data with ease.</li>
           </ul>
           <p className="mb-4">
             By using these tools together, you can improve your coding efficiency and maintain high-quality code standards.

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
 function Navbar() {
   const { darkMode, toggleDarkMode } = useTheme();
@@ -9,6 +10,9 @@ function Navbar() {
   const categories = {
     'Social': ['/social-media-analyzer', '/hashtag-generator'],
     'Finance': ['/mortgage-calculator', '/investment-calculator', '/tax-calculator'],
+    'Finance Tools': [
+      { name: 'Net Income Tax Calculator', path: '/net-income-tax-calculator', icon: <NetIncomeTaxCalculatorIcon /> },
+    ],
     'Developers': ['/code-formatter', '/json-validator', '/curl-generator', '/markdown-to-html'],
   };
 

@@ -230,8 +230,8 @@ function HashtagGenerator() {
             Enhance your social media strategy with our additional tools:
           </p>
           <ul className="list-disc pl-6 mb-4">
-            <li><strong><a href="/#/tools/social-media-analyzer" className="text-indigo-600 hover:underline">Social Media Analyzer</a></strong> – Analyze your social media performance and gain insights.</li>
-            <li><strong><a href="/#/tools/curl-generator" className="text-indigo-600 hover:underline">cURL Generator</a></strong> – Generate cURL commands for API requests.</li>
+            <li><strong><a href="/social-media-analyzer" className="text-indigo-600 hover:underline">Social Media Analyzer</a></strong> – Analyze your social media performance and gain insights.</li>
+            <li><strong><a href="/curl-generator" className="text-indigo-600 hover:underline">cURL Generator</a></strong> – Generate cURL commands for API requests.</li>
           </ul>
           <p className="mb-4">
             By using these tools together, you can optimize your social media campaigns and improve your online presence.

@@ -412,7 +412,7 @@ function TaxCalculator() {
             <li>
               <strong>
                 <a
-                  href="/#/tools/mortgage-calculator"
+                  href="/mortgage-calculator"
                   className="text-indigo-600 hover:underline"
                 >
                   Mortgage Calculator
@@ -424,7 +424,7 @@ function TaxCalculator() {
             <li>
               <strong>
                 <a
-                  href="/#/tools/tax-calculator"
+                  href="/tax-calculator"
                   className="text-indigo-600 hover:underline"
                 >
                   Tax Calculator

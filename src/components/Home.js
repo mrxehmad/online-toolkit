@@ -8,6 +8,7 @@ import {
   FaTerminal,
   FaMarkdown,
 } from 'react-icons/fa';
+import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
 function Home() {
   const { darkMode } = useTheme();
@@ -31,6 +32,12 @@ function Home() {
         description: 'Estimate your income tax and take-home pay',
         path: '/tax-calculator',
         icon: <FaCalculator />,
+      },
+      {
+        name: 'Net Income Tax Calculator',
+        description: 'Calculate your net income after tax.',
+        icon: <NetIncomeTaxCalculatorIcon />,
+        path: '/net-income-tax-calculator',
       },
     ],
     'Developer Tools': [

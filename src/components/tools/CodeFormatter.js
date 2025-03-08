@@ -192,9 +192,9 @@ function CodeFormatter() {
             Enhance your coding and financial planning with our additional tools:
           </p>
           <ul className="list-disc pl-6 mb-4">
-            <li><strong><a href="/#/tools/tax-calculator" className="text-indigo-600 hover:underline">Tax Calculator</a></strong> – Quickly estimate your tax liability.</li>
-            <li><strong><a href="/#/tools/mortgage-calculator" className="text-indigo-600 hover:underline">Mortgage Calculator</a></strong> – Plan your home loan effectively.</li>
-            <li><strong><a href="/#/tools/investment-calculator" className="text-indigo-600 hover:underline">Investment Calculator</a></strong> – Calculate potential investment returns over time.</li>
+            <li><strong><a href="/tax-calculator" className="text-indigo-600 hover:underline">Tax Calculator</a></strong> – Quickly estimate your tax liability.</li>
+            <li><strong><a href="/mortgage-calculator" className="text-indigo-600 hover:underline">Mortgage Calculator</a></strong> – Plan your home loan effectively.</li>
+            <li><strong><a href="/investment-calculator" className="text-indigo-600 hover:underline">Investment Calculator</a></strong> – Calculate potential investment returns over time.</li>
           </ul>
           <p className="mb-4">
             By using these tools together, you can create a well-rounded financial plan that maximizes your investments and minimizes financial risks.

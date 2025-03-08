@@ -160,8 +160,8 @@ function JsonValidator() {
             Enhance your development workflow with our additional tools:
           </p>
           <ul className="list-disc pl-6 mb-4">
-            <li><strong><a href="/#/tools/code-formatter" className="text-indigo-600 hover:underline">Code Formatter</a></strong> – Instantly format and beautify your code.</li>
-            <li><strong><a href="/#/tools/curl-generator" className="text-indigo-600 hover:underline">cURL Generator</a></strong> – Generate cURL commands for API requests.</li>
+            <li><strong><a href="/code-formatter" className="text-indigo-600 hover:underline">Code Formatter</a></strong> – Instantly format and beautify your code.</li>
+            <li><strong><a href="/curl-generator" className="text-indigo-600 hover:underline">cURL Generator</a></strong> – Generate cURL commands for API requests.</li>
           </ul>
           <p className="mb-4">
             By using these tools together, you can improve your coding efficiency and maintain high-quality code standards.
