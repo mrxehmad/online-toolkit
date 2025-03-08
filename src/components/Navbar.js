@@ -7,9 +7,9 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const categories = {
-    'Social': ['/tools/social-media-analyzer', '/tools/hashtag-generator'],
-    'Finance': ['/tools/mortgage-calculator', '/tools/investment-calculator', '/tools/tax-calculator'],
-    'Developers': ['/tools/code-formatter', '/tools/json-validator', '/tools/curl-generator', '/tools/markdown-to-html'],
+    'Social': ['/social-media-analyzer', '/hashtag-generator'],
+    'Finance': ['/mortgage-calculator', '/investment-calculator', '/tax-calculator'],
+    'Developers': ['/code-formatter', '/json-validator', '/curl-generator', '/markdown-to-html'],
   };
 
   return (
