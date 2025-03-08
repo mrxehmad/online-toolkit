@@ -54,7 +54,7 @@ function NetIncomeTaxCalculator() {
 
           {netIncome !== null && taxAmount !== null && (
             <div className="mt-4 text-lg">
-              <strong>Net Income: </strong>${netIncome.toFixed(2)}
+              <br /><br /><br /><strong>Net Income: </strong>${netIncome.toFixed(2)}
               <br />
               <strong>Tax Amount: </strong>${taxAmount.toFixed(2)}
             </div>
