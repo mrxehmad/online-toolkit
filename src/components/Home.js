@@ -7,6 +7,8 @@ import {
   FaChartLine,
   FaTerminal,
   FaMarkdown,
+  FaFilter,
+  FaClock,
 } from 'react-icons/fa';
 import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
@@ -64,6 +66,18 @@ function Home() {
         description: 'Convert Markdown text to HTML',
         path: '/markdown-to-html',
         icon: <FaMarkdown />,
+      },
+      {
+        name: 'Pi-hole Regex Generator',
+        description: 'Create regex patterns for Pi-hole domain blocking',
+        path: '/pihole-regex-generator',
+        icon: <FaFilter />,
+      },
+      {
+        name: 'Crontab Generator',
+        description: 'Create and understand crontab scheduling expressions',
+        path: '/crontab-generator',
+        icon: <FaClock />,
       },
     ],
     'Social Media Tools': [

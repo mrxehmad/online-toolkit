@@ -44,6 +44,14 @@
     <loc>https://tools.ehmad.site/markdown-to-html</loc>
     <priority>0.8</priority>
   </url>
+    <url>
+    <loc>https://tools.ehmad.site/crontab-generator</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tools.ehmad.site/pihole-regex-generator</loc>
+    <priority>0.5</priority>
+  </url>
   <url>
     <loc>https://tools.ehmad.site/terms</loc>
     <priority>0.5</priority>

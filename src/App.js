@@ -16,6 +16,8 @@ import SocialMediaAnalyzer from './components/tools/SocialMediaAnalyzer';
 import HashtagGenerator from './components/tools/HashtagGenerator';
 import MarkdownToHtml from './components/tools/MarkdownToHtml';
 import NetIncomeTaxCalculator from './components/tools/NetIncomeTaxCalculator';
+import PiholeRegexGenerator from './components/tools/PiholeRegexGenerator';
+import CrontabGenerator from './components/tools/CrontabGenerator';
 import NotFound from './components/NotFound';
 
 // Import pages
@@ -63,6 +65,8 @@ function App() {
               <Route path="/hashtag-generator" element={<HashtagGenerator />} />
               <Route path="/markdown-to-html" element={<MarkdownToHtml />} />
               <Route path="/net-income-tax-calculator" element={<NetIncomeTaxCalculator />} />
+              <Route path="/pihole-regex-generator" element={<PiholeRegexGenerator />} />
+              <Route path="/crontab-generator" element={<CrontabGenerator />} />
               <Route path="*" element={<NotFound />} />
               {/* Pages */}
               <Route path="/terms" element={<TermsAndConditions />} />
