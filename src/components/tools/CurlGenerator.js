@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTheme } from '../../context/ThemeContext';
+import MetaTags from '../MetaTags';
 
 function CurlGenerator() {
   const { darkMode } = useTheme();
@@ -108,210 +109,229 @@ function CurlGenerator() {
   };
 
   return (
-    <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'} py-12 px-4 sm:px-6 lg:px-8`}>
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-8">
-          <h1 className={`text-3xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-            cURL Command Generator
-          </h1>
-          <p className={`mt-2 text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-            Generate cURL commands for your API requests
-          </p>
-        </div>
+    <>
+      <MetaTags
+        title="cURL Command Generator"
+        description="Generate cURL commands easily with our online tool. Create complex HTTP requests with custom headers, methods, data, and authentication. Perfect for API testing and development."
+        keywords={[
+          'curl generator',
+          'curl command builder',
+          'http request generator',
+          'api testing tool',
+          'curl syntax',
+          'http client',
+          'rest api tool',
+          'curl command line',
+          'http request builder',
+          'api development tool'
+        ]}
+        canonicalUrl="/curl-generator"
+      />
+      <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'} py-12 px-4 sm:px-6 lg:px-8`}>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h1 className={`text-3xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+              cURL Command Generator
+            </h1>
+            <p className={`mt-2 text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              Generate cURL commands for your API requests
+            </p>
+          </div>
 
-        <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6 mb-8`}>
-          <div className="space-y-6">
-            {/* Method and URL */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg rounded-lg p-6 mb-8`}>
+            <div className="space-y-6">
+              {/* Method and URL */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Method
+                  </label>
+                  <select
+                    name="method"
+                    value={formData.method}
+                    onChange={handleInputChange}
+                    className={`w-full px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                  >
+                    {methods.map(method => (
+                      <option key={method} value={method}>
+                        {method}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="md:col-span-3">
+                  <label className="block text-sm font-medium mb-2">
+                    URL
+                  </label>
+                  <input
+                    type="url"
+                    name="url"
+                    value={formData.url}
+                    onChange={handleInputChange}
+                    placeholder="https://api.example.com/endpoint"
+                    className={`w-full px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                  />
+                </div>
+              </div>
+
+              {/* Headers */}
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <label className="block text-sm font-medium">Headers</label>
+                  <button
+                    type="button"
+                    onClick={addHeader}
+                    className="text-sm text-indigo-600 hover:text-indigo-500"
+                  >
+                    Add Header
+                  </button>
+                </div>
+                <div className="space-y-2">
+                  {formData.headers.map((header, index) => (
+                    <div key={index} className="flex gap-2">
+                      <input
+                        type="text"
+                        name={`header-key-${index}`}
+                        value={header.key}
+                        onChange={handleInputChange}
+                        placeholder="Header name"
+                        className={`flex-1 px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                      />
+                      <input
+                        type="text"
+                        name={`header-value-${index}`}
+                        value={header.value}
+                        onChange={handleInputChange}
+                        placeholder="Value"
+                        className={`flex-1 px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                      />
+                      <button
+                        type="button"
+                        onClick={() => removeHeader(index)}
+                        className="px-3 py-2 text-red-600 hover:text-red-500"
+                      >
+                        ×
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Authentication */}
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Method
+                  Authentication
                 </label>
                 <select
-                  name="method"
-                  value={formData.method}
+                  name="auth.type"
+                  value={formData.auth.type}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                  className={`w-full px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-2`}
                 >
-                  {methods.map(method => (
-                    <option key={method} value={method}>
-                      {method}
+                  {authTypes.map(type => (
+                    <option key={type.value} value={type.value}>
+                      {type.label}
                     </option>
                   ))}
                 </select>
-              </div>
-              <div className="md:col-span-3">
-                <label className="block text-sm font-medium mb-2">
-                  URL
-                </label>
-                <input
-                  type="url"
-                  name="url"
-                  value={formData.url}
-                  onChange={handleInputChange}
-                  placeholder="https://api.example.com/endpoint"
-                  className={`w-full px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
-                />
-              </div>
-            </div>
 
-            {/* Headers */}
-            <div>
-              <div className="flex justify-between items-center mb-2">
-                <label className="block text-sm font-medium">Headers</label>
-                <button
-                  type="button"
-                  onClick={addHeader}
-                  className="text-sm text-indigo-600 hover:text-indigo-500"
-                >
-                  Add Header
-                </button>
-              </div>
-              <div className="space-y-2">
-                {formData.headers.map((header, index) => (
-                  <div key={index} className="flex gap-2">
+                {formData.auth.type === 'basic' && (
+                  <div className="grid grid-cols-2 gap-2">
                     <input
                       type="text"
-                      name={`header-key-${index}`}
-                      value={header.key}
+                      name="auth.username"
+                      value={formData.auth.username}
                       onChange={handleInputChange}
-                      placeholder="Header name"
-                      className={`flex-1 px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                      placeholder="Username"
+                      className={`px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                     />
                     <input
-                      type="text"
-                      name={`header-value-${index}`}
-                      value={header.value}
+                      type="password"
+                      name="auth.password"
+                      value={formData.auth.password}
                       onChange={handleInputChange}
-                      placeholder="Value"
-                      className={`flex-1 px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                      placeholder="Password"
+                      className={`px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                     />
-                    <button
-                      type="button"
-                      onClick={() => removeHeader(index)}
-                      className="px-3 py-2 text-red-600 hover:text-red-500"
-                    >
-                      ×
-                    </button>
                   </div>
-                ))}
-              </div>
-            </div>
+                )}
 
-            {/* Authentication */}
-            <div>
-              <label className="block text-sm font-medium mb-2">
-                Authentication
-              </label>
-              <select
-                name="auth.type"
-                value={formData.auth.type}
-                onChange={handleInputChange}
-                className={`w-full px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-2`}
-              >
-                {authTypes.map(type => (
-                  <option key={type.value} value={type.value}>
-                    {type.label}
-                  </option>
-                ))}
-              </select>
-
-              {formData.auth.type === 'basic' && (
-                <div className="grid grid-cols-2 gap-2">
+                {formData.auth.type === 'bearer' && (
                   <input
                     type="text"
-                    name="auth.username"
-                    value={formData.auth.username}
+                    name="auth.token"
+                    value={formData.auth.token}
                     onChange={handleInputChange}
-                    placeholder="Username"
-                    className={`px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                    placeholder="Bearer Token"
+                    className={`w-full px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                   />
-                  <input
-                    type="password"
-                    name="auth.password"
-                    value={formData.auth.password}
+                )}
+              </div>
+
+              {/* Request Body */}
+              {['POST', 'PUT', 'PATCH'].includes(formData.method) && (
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Request Body
+                  </label>
+                  <textarea
+                    name="body"
+                    value={formData.body}
                     onChange={handleInputChange}
-                    placeholder="Password"
-                    className={`px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                    rows="4"
+                    className={`w-full px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                    placeholder="Enter request body (JSON, form data, etc.)"
                   />
                 </div>
               )}
 
-              {formData.auth.type === 'bearer' && (
-                <input
-                  type="text"
-                  name="auth.token"
-                  value={formData.auth.token}
-                  onChange={handleInputChange}
-                  placeholder="Bearer Token"
-                  className={`w-full px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
-                />
-              )}
-            </div>
-
-            {/* Request Body */}
-            {['POST', 'PUT', 'PATCH'].includes(formData.method) && (
+              {/* Options */}
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Request Body
+                  Options
                 </label>
-                <textarea
-                  name="body"
-                  value={formData.body}
-                  onChange={handleInputChange}
-                  rows="4"
-                  className={`w-full px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
-                  placeholder="Enter request body (JSON, form data, etc.)"
-                />
-              </div>
-            )}
-
-            {/* Options */}
-            <div>
-              <label className="block text-sm font-medium mb-2">
-                Options
-              </label>
-              <div className="space-y-2">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    name="options.followRedirects"
-                    checked={formData.options.followRedirects}
-                    onChange={handleInputChange}
-                    className="mr-2"
-                  />
-                  Follow redirects (-L)
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    name="options.insecure"
-                    checked={formData.options.insecure}
-                    onChange={handleInputChange}
-                    className="mr-2"
-                  />
-                  Allow insecure server connections (-k)
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    name="options.compressed"
-                    checked={formData.options.compressed}
-                    onChange={handleInputChange}
-                    className="mr-2"
-                  />
-                  Request compressed response (--compressed)
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    name="options.verbose"
-                    checked={formData.options.verbose}
-                    onChange={handleInputChange}
-                    className="mr-2"
-                  />
-                  Verbose output (-v)
-                </label>
+                <div className="space-y-2">
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="options.followRedirects"
+                      checked={formData.options.followRedirects}
+                      onChange={handleInputChange}
+                      className="mr-2"
+                    />
+                    Follow redirects (-L)
+                  </label>
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="options.insecure"
+                      checked={formData.options.insecure}
+                      onChange={handleInputChange}
+                      className="mr-2"
+                    />
+                    Allow insecure server connections (-k)
+                  </label>
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="options.compressed"
+                      checked={formData.options.compressed}
+                      onChange={handleInputChange}
+                      className="mr-2"
+                    />
+                    Request compressed response (--compressed)
+                  </label>
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="options.verbose"
+                      checked={formData.options.verbose}
+                      onChange={handleInputChange}
+                      className="mr-2"
+                    />
+                    Verbose output (-v)
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -380,7 +400,7 @@ function CurlGenerator() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
