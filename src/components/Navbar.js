@@ -10,7 +10,7 @@ function Navbar() {
   const categories = {
     'Social': ['/social-media-analyzer', '/hashtag-generator'],
     'Finance': ['/mortgage-calculator', '/investment-calculator', '/tax-calculator', '/net-income-tax-calculator'],
-    'Developers': ['/code-formatter', '/json-validator', '/curl-generator', '/markdown-to-html', '/pihole-regex-generator', '/crontab-generator'],
+    'Developers': ['/code-formatter', '/json-validator', '/curl-generator', '/markdown-to-html', '/pihole-regex-generator', '/crontab-generator', '/crypto-converter'],
   };
 
   return (

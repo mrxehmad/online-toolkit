@@ -3,6 +3,10 @@ import { lazy } from 'react';
 // Tool components with more granular splitting
 export const routes = {
   tools: {
+    cryptoConverter: {
+      path: '/crypto-converter',
+      component: lazy(() => import(/* webpackChunkName: "crypto" */ './components/tools/CryptoConverter')),
+    },
     mortgageCalculator: {
       path: '/mortgage-calculator',
       component: lazy(() => import(/* webpackChunkName: "mortgage" */ './components/tools/MortgageCalculator')),
