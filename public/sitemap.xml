@@ -1,67 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url>
     <loc>https://tools.ehmad.site/</loc>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/mortgage-calculator</loc>
+    <loc>https://tools.ehmad.site/contact</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/investment-calculator</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/tax-calculator</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/net-income-tax-calculator</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/code-formatter</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/json-validator</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/curl-generator</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/social-media-analyzer</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/hashtag-generator</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/markdown-to-html</loc>
-    <priority>0.8</priority>
-  </url>
-    <url>
-    <loc>https://tools.ehmad.site/crontab-generator</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/pihole-regex-generator</loc>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://tools.ehmad.site/terms</loc>
-    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tools.ehmad.site/privacy</loc>
-    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Finance Tools -->
+  <url>
+    <loc>https://tools.ehmad.site/mortgage-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/contact</loc>
-    <priority>0.5</priority>
+    <loc>https://tools.ehmad.site/investment-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tools.ehmad.site/tax-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tools.ehmad.site/net-income-tax-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Cryptographic Tools -->
+  <url>
+    <loc>https://tools.ehmad.site/crypto-converter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Developer Tools -->
+  <url>
+    <loc>https://tools.ehmad.site/browser-info-detector</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tools.ehmad.site/code-formatter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tools.ehmad.site/json-validator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tools.ehmad.site/curl-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tools.ehmad.site/markdown-to-html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tools.ehmad.site/pihole-regex-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tools.ehmad.site/crontab-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Social Media Tools -->
+  <url>
+    <loc>https://tools.ehmad.site/social-media-analyzer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tools.ehmad.site/hashtag-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset> 
