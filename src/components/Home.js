@@ -9,6 +9,9 @@ import {
   FaMarkdown,
   FaFilter,
   FaClock,
+  FaLock,
+  FaShieldAlt,
+  FaDesktop,
 } from 'react-icons/fa';
 import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
@@ -42,7 +45,21 @@ function Home() {
         path: '/net-income-tax-calculator',
       },
     ],
+    'Cryptographic Tools': [
+      {
+        name: 'Cryptographic Converter',
+        description: 'Encrypt and decrypt text using various algorithms (AES, TripleDES, Rabbit, RC4)',
+        path: '/crypto-converter',
+        icon: <FaLock />,
+      },
+    ],
     'Developer Tools': [
+      {
+        name: 'Browser Info Detector',
+        description: 'Detect and display browser, OS, device, and CPU information',
+        path: '/browser-info-detector',
+        icon: <FaDesktop />,
+      },
       {
         name: 'Code Formatter',
         description: 'Format and beautify your code',
