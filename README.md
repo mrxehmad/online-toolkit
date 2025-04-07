@@ -8,11 +8,19 @@ A comprehensive collection of web-based tools built with React.js and Tailwind C
 - **Mortgage Calculator**: Calculate mortgage payments and amortization schedules
 - **Investment Calculator**: Plan your investments and calculate potential returns
 - **Tax Calculator**: Estimate income tax and take-home pay with support for different filing statuses
+- **Net Income Tax Calculator**: Calculate your net income after tax deductions
+
+### Cryptographic Tools
+- **Cryptographic Converter**: Encrypt and decrypt text using various algorithms (AES, TripleDES, Rabbit, RC4)
 
 ### Developer Tools
+- **Browser Info Detector**: Detect and display browser, OS, device, and CPU information
 - **Code Formatter**: Format and beautify code with support for multiple languages
 - **JSON Validator**: Validate and format JSON data
 - **cURL Generator**: Generate cURL commands for API requests with various options
+- **Markdown to HTML**: Convert Markdown text to HTML format
+- **Pi-hole Regex Generator**: Create regex patterns for Pi-hole domain blocking
+- **Crontab Generator**: Create and understand crontab scheduling expressions
 
 ### Social Media Tools
 - **Social Media Analyzer**: Analyze social media post performance and get insights
@@ -65,39 +73,6 @@ Visit [Online Toolkit](https://tools.ehmad.site/) to see the live version.
 - Form validation
 - Error handling
 - Mobile-friendly layout
-
-## 📁 Project Structure
-
-```
-toolkit-website/
-├── public/
-│   ├── tools.png
-│   ├── index.html
-│   └── manifest.json
-├── src/
-│   ├── components/
-│   │   ├── tools/
-│   │   │   ├── MortgageCalculator.js
-│   │   │   ├── InvestmentCalculator.js
-│   │   │   ├── TaxCalculator.js
-│   │   │   ├── CodeFormatter.js
-│   │   │   ├── JsonValidator.js
-│   │   │   ├── CurlGenerator.js
-│   │   │   ├── SocialMediaAnalyzer.js
-│   │   │   └── HashtagGenerator.js
-│   │   ├── pages/
-│   │   │   ├── TermsAndConditions.js
-│   │   │   ├── PrivacyPolicy.js
-│   │   │   └── ContactUs.js
-│   │   ├── Navbar.js
-│   │   ├── Footer.js
-│   │   └── Home.js
-│   ├── context/
-│   │   └── ThemeContext.js
-│   ├── App.js
-│   └── index.js
-└── package.json
-```
 
 ## 🤝 Contributing
 
