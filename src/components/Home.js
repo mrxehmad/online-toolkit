@@ -10,8 +10,13 @@ import {
   FaFilter,
   FaClock,
   FaLock,
-  FaShieldAlt,
+  FaKey,
   FaDesktop,
+  FaShieldAlt,
+  FaRandom,
+  FaDocker,
+  FaFileAlt,
+  FaLockOpen,
 } from 'react-icons/fa';
 import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
@@ -51,6 +56,24 @@ function Home() {
         description: 'Encrypt and decrypt text using various algorithms (AES, TripleDES, Rabbit, RC4)',
         path: '/crypto-converter',
         icon: <FaLock />,
+      },
+      {
+        name: 'String Obfuscator',
+        description: 'Obfuscate strings to make them harder to read and reverse engineer',
+        path: '/string-obfuscator',
+        icon: <FaLockOpen />,
+      },
+      {
+        name: 'Base64 Encode/Decode',
+        description: 'Encode and decode text using Base64 encoding',
+        path: '/base64-converter',
+        icon: <FaShieldAlt />,
+      },
+      {
+        name: 'UUID Generator',
+        description: 'Generate random UUIDs for your projects',
+        path: '/uuid-generator',
+        icon: <FaKey />,
       },
     ],
     'Developer Tools': [
@@ -95,6 +118,30 @@ function Home() {
         description: 'Create and understand crontab scheduling expressions',
         path: '/crontab-generator',
         icon: <FaClock />,
+      },
+      {
+        name: 'Port Generator',
+        description: 'Generate random port numbers within specified ranges',
+        path: '/port-generator',
+        icon: <FaRandom />,
+      },
+      {
+        name: 'Docker Run to Compose',
+        description: 'Convert Docker run commands to Docker Compose format',
+        path: '/docker-converter',
+        icon: <FaDocker />,
+      },
+      {
+        name: 'Chmod Calculator',
+        description: 'Calculate and understand file permissions',
+        path: '/chmod-calculator',
+        icon: <FaFileAlt />,
+      },
+      {
+        name: 'YAML Formatter',
+        description: 'Format and prettify YAML files',
+        path: '/yaml-formatter',
+        icon: <FaCode />,
       },
     ],
     'Social Media Tools': [

@@ -1,12 +1,11 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import MetaTags from '../MetaTags';
 
 function CodeFormatter() {
   const { darkMode } = useTheme();
-  const [code, setCode] = useState('');
-  const [language, setLanguage] = useState('javascript');
-  const [formattedCode, setFormattedCode] = useState('');
+  const [input, setInput] = useState('');
+  const [formatted, setFormatted] = useState('');
   const [error, setError] = useState('');
 
   const languages = [
@@ -17,69 +16,13 @@ function CodeFormatter() {
   ];
 
   const formatCode = () => {
-    setError('');
     try {
-      let result = '';
-      
-      switch (language) {
-        case 'javascript':
-          // Basic JavaScript formatting
-          try {
-            result = JSON.stringify(eval('(' + code + ')'), null, 2);
-          } catch {
-            // If not a valid object/array, try to format the code with basic indentation
-            result = code
-              .replace(/[{]/g, '{\n  ')
-              .replace(/[}]/g, '\n}\n')
-              .replace(/;/g, ';\n')
-              .replace(/\n\s*\n/g, '\n') // Remove extra newlines
-              .split('\n')
-              .map(line => line.trim())
-              .join('\n');
-          }
-          break;
-
-        case 'json':
-          // JSON formatting
-          result = JSON.stringify(JSON.parse(code), null, 2);
-          break;
-
-        case 'html':
-          // Basic HTML formatting
-          result = code
-            .replace(/></g, '>\n<')
-            .replace(/(<[^/][^>]*>)/g, '$1\n')
-            .replace(/(<\/[^>]*>)/g, '\n$1')
-            .split('\n')
-            .map(line => line.trim())
-            .filter(line => line.length > 0)
-            .map((line, index, array) => {
-              const indent = (line.match(/<\//) || index === 0 || array[index - 1].match(/<\//)) ? '' : '  ';
-              return indent + line;
-            })
-            .join('\n');
-          break;
-
-        case 'css':
-          // Basic CSS formatting
-          result = code
-            .replace(/[{]/g, ' {\n  ')
-            .replace(/[}]/g, '\n}\n')
-            .replace(/;/g, ';\n  ')
-            .replace(/\n\s*\n/g, '\n')
-            .split('\n')
-            .map(line => line.trim())
-            .filter(line => line.length > 0)
-            .join('\n');
-          break;
-
-        default:
-          result = code;
-      }
-      
-      setFormattedCode(result);
+      const formattedCode = JSON.stringify(JSON.parse(input), null, 2);
+      setFormatted(formattedCode);
+      setError('');
     } catch (err) {
-      setError('Invalid code format. Please check your input.');
+      setError('Invalid code format');
+      setFormatted('');
     }
   };
 
@@ -121,8 +64,8 @@ function CodeFormatter() {
                   Select Language
                 </label>
                 <select
-                  value={language}
-                  onChange={(e) => setLanguage(e.target.value)}
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
                   className={`w-full px-3 py-2 rounded-md border ${darkMode ? 'bg-gray-700 border-gray-600 text-gray-100' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                 >
                   {languages.map(lang => (
@@ -137,8 +80,8 @@ function CodeFormatter() {
                 Input Code
               </label>
               <textarea
-                value={code}
-                onChange={(e) => setCode(e.target.value)}
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
                 className={`w-full h-96 px-3 py-2 rounded-md border font-mono text-sm ${darkMode ? 'bg-gray-700 border-gray-600 text-gray-100' : 'bg-white border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                 placeholder="Paste your code here..."
               />
@@ -163,12 +106,12 @@ function CodeFormatter() {
                 Formatted Code
               </label>
               <pre className={`w-full h-96 px-3 py-2 rounded-md border font-mono text-sm overflow-auto ${darkMode ? 'bg-gray-700 border-gray-600 text-gray-100' : 'bg-white border-gray-300'}`}>
-                {formattedCode}
+                {formatted}
               </pre>
 
               <button
                 onClick={() => {
-                  navigator.clipboard.writeText(formattedCode);
+                  navigator.clipboard.writeText(formatted);
                 }}
                 className="mt-4 w-full bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition-colors duration-200"
               >

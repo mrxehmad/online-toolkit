@@ -1,30 +1,70 @@
-# Online Toolkit
+# Online Toolkit Website
 
-A comprehensive collection of web-based tools built with React.js and Tailwind CSS. This application provides various utilities for developers, finance professionals, and social media managers.
+A collection of useful online tools for developers, designers, and general users.
 
-## 🚀 Features
+## Available Tools
 
 ### Finance Tools
-- **Mortgage Calculator**: Calculate mortgage payments and amortization schedules
-- **Investment Calculator**: Plan your investments and calculate potential returns
-- **Tax Calculator**: Estimate income tax and take-home pay with support for different filing statuses
-- **Net Income Tax Calculator**: Calculate your net income after tax deductions
+- Mortgage Calculator
+- Investment Calculator
+- Tax Calculator
+- Net Income Tax Calculator
 
 ### Cryptographic Tools
-- **Cryptographic Converter**: Encrypt and decrypt text using various algorithms (AES, TripleDES, Rabbit, RC4)
+- Cryptographic Converter (AES, TripleDES, Rabbit, RC4)
+- String Obfuscator
+- Base64 Encode/Decode
+- UUID Generator
 
 ### Developer Tools
-- **Browser Info Detector**: Detect and display browser, OS, device, and CPU information
-- **Code Formatter**: Format and beautify code with support for multiple languages
-- **JSON Validator**: Validate and format JSON data
-- **cURL Generator**: Generate cURL commands for API requests with various options
-- **Markdown to HTML**: Convert Markdown text to HTML format
-- **Pi-hole Regex Generator**: Create regex patterns for Pi-hole domain blocking
-- **Crontab Generator**: Create and understand crontab scheduling expressions
+- Browser Info Detector
+- Code Formatter
+- JSON Validator
+- cURL Generator
+- Markdown to HTML
+- Pi-hole Regex Generator
+- Crontab Generator
+- Port Generator
+- Docker Run to Compose
+- Chmod Calculator
+- YAML Formatter
 
 ### Social Media Tools
-- **Social Media Analyzer**: Analyze social media post performance and get insights
-- **Hashtag Generator**: Generate relevant hashtags for your content based on niche
+- Social Media Analyzer
+- Hashtag Generator
+
+## Features
+- Dark/Light mode support
+- Responsive design
+- Modern UI
+- Easy to use interface
+- Real-time updates
+- Copy to clipboard functionality
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file with the following variables:
+   ```
+   REACT_APP_ADMIN_PASSWORD=admin
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+
+## Admin Dashboard
+The admin dashboard is password protected and can be accessed at `/admin`. The password is stored in the environment variables.
+
+## Contributing
+Feel free to submit issues and enhancement requests.
+
+## License
+This project is licensed under the MIT License.
 
 ## 🛠️ Technologies Used
 

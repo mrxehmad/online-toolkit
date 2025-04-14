@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 import { routes } from './routes';
+import Home from './components/Home';
+import AdminDashboard from './components/AdminDashboard';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -32,6 +34,8 @@ function App() {
           <main className="flex-grow">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/admin" element={<AdminDashboard />} />
                 {/* Tool Routes */}
                 {Object.values(routes.tools).map(({ path, component: Component }) => (
                   <Route key={path} path={path} element={<Component />} />

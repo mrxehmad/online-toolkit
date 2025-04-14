@@ -59,6 +59,38 @@ export const routes = {
       path: '/crontab-generator',
       component: lazy(() => import(/* webpackChunkName: "crontab" */ './components/tools/CrontabGenerator')),
     },
+    uuidGenerator: {
+      path: '/uuid-generator',
+      component: lazy(() => import(/* webpackChunkName: "uuid" */ './components/tools/UuidGenerator')),
+    },
+    portGenerator: {
+      path: '/port-generator',
+      component: lazy(() => import(/* webpackChunkName: "port" */ './components/tools/PortGenerator')),
+    },
+    dockerConverter: {
+      path: '/docker-converter',
+      component: lazy(() => import(/* webpackChunkName: "docker" */ './components/tools/DockerConverter')),
+    },
+    stringObfuscator: {
+      path: '/string-obfuscator',
+      component: lazy(() => import(/* webpackChunkName: "obfuscator" */ './components/tools/StringObfuscator')),
+    },
+    base64Converter: {
+      path: '/base64-converter',
+      component: lazy(() => import(/* webpackChunkName: "base64" */ './components/tools/Base64Converter')),
+    },
+    chmodCalculator: {
+      path: '/chmod-calculator',
+      component: lazy(() => import(/* webpackChunkName: "chmod" */ './components/tools/ChmodCalculator')),
+    },
+    yamlFormatter: {
+      path: '/yaml-formatter',
+      component: lazy(() => import(/* webpackChunkName: "yaml" */ './components/tools/YamlFormatter')),
+    },
+    adminDashboard: {
+      path: '/admin',
+      component: lazy(() => import(/* webpackChunkName: "admin" */ './components/tools/AdminDashboard')),
+    },
   },
   pages: {
     home: {

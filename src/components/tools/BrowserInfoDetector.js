@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../../context/ThemeContext';
-import { FaDesktop, FaMobile, FaTablet, FaInfoCircle } from 'react-icons/fa';
+import { FaDesktop } from 'react-icons/fa';
 import { UAParser } from 'ua-parser-js';
 
 const BrowserInfoDetector = () => {
@@ -14,10 +14,6 @@ const BrowserInfoDetector = () => {
   }, []);
 
   const getDeviceIcon = () => {
-    if (!browserInfo?.device) return <FaDesktop />;
-    
-    if (browserInfo.device.type === 'mobile') return <FaMobile />;
-    if (browserInfo.device.type === 'tablet') return <FaTablet />;
     return <FaDesktop />;
   };
 

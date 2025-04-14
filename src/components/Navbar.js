@@ -1,17 +1,14 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
 function Navbar() {
   const { darkMode, toggleDarkMode } = useTheme();
-  const [isOpen, setIsOpen] = useState(false);
 
   const categories = {
     'Social': ['/social-media-analyzer', '/hashtag-generator'],
     'Finance': ['/mortgage-calculator', '/investment-calculator', '/tax-calculator', '/net-income-tax-calculator'],
-    'Cryptographic': ['/crypto-converter'],
-    'Developers': ['/browser-info-detector', '/code-formatter', '/json-validator', '/curl-generator', '/markdown-to-html', '/pihole-regex-generator', '/crontab-generator'],
+    'Cryptographic': ['/crypto-converter', '/base64-converter', '/string-obfuscator', '/uuid-generator'],
+    'Developers': ['/browser-info-detector', '/code-formatter', '/json-validator', '/curl-generator', '/markdown-to-html', '/pihole-regex-generator', '/crontab-generator', '/yaml-formatter', '/port-generator', '/docker-converter', '/chmod-calculator'],
   };
 
   return (
