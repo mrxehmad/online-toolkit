@@ -17,6 +17,8 @@ import {
   FaDocker,
   FaFileAlt,
   FaLockOpen,
+  FaSearch,
+  FaFileCode,
 } from 'react-icons/fa';
 import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
@@ -51,6 +53,12 @@ function Home() {
       },
     ],
     'Cryptographic Tools': [
+      {
+        name: 'Base64 File Converter',
+        description: 'Convert files and text to base64 representation',
+        path: '/base64-file-converter',
+        icon: <FaFileCode />,
+      },
       {
         name: 'Cryptographic Converter',
         description: 'Encrypt and decrypt text using various algorithms (AES, TripleDES, Rabbit, RC4)',
@@ -143,6 +151,12 @@ function Home() {
         path: '/yaml-formatter',
         icon: <FaCode />,
       },
+      {
+        name: 'Google Dork Generator',
+        description: 'Create advanced Google search queries for security research',
+        path: '/google-dork-generator',
+        icon: <FaSearch />,
+      },
     ],
     'Social Media Tools': [
       {
@@ -202,6 +216,11 @@ function Home() {
             </div>
           ))}
         </div>
+
+        <a href="/tools/webcam-tester" className="tool-card">
+          <div className="tool-card-title">Webcam Tester</div>
+          <div className="tool-card-desc">Test your webcam, take a picture or record a video, and view detailed webcam information.</div>
+        </a>
       </div>
     </div>
   );

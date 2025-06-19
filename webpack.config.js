@@ -2,6 +2,7 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
@@ -50,6 +51,13 @@ module.exports = {
       threshold: 10240,
       minRatio: 0.8,
     }),
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+      Buffer: ['buffer', 'Buffer'],
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_DEBUG': false,
+    }),
     process.env.ANALYZE && new BundleAnalyzerPlugin(),
   ].filter(Boolean),
   module: {
@@ -72,5 +80,30 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    fallback: {
+      "crypto": require.resolve("crypto-browserify"),
+      "stream": require.resolve("stream-browserify"),
+      "buffer": require.resolve("buffer/"),
+      "process": require.resolve("process/browser"),
+      "vm": require.resolve("vm-browserify"),
+      "path": require.resolve("path-browserify"),
+      "os": require.resolve("os-browserify/browser"),
+      "assert": require.resolve("assert/"),
+      "util": require.resolve("util/"),
+      "url": require.resolve("url/"),
+      "querystring": require.resolve("querystring-es3"),
+      "zlib": require.resolve("browserify-zlib"),
+      "http": require.resolve("stream-http"),
+      "https": require.resolve("https-browserify"),
+      "fs": false,
+      "net": false,
+      "tls": false,
+      "child_process": false,
+    },
+  },
+  node: {
+    global: true,
+    __filename: true,
+    __dirname: true,
   },
 }; 

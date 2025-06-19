@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+import React from 'react';
 
 // Tool components with more granular splitting
 export const routes = {
@@ -90,6 +91,18 @@ export const routes = {
     adminDashboard: {
       path: '/admin',
       component: lazy(() => import(/* webpackChunkName: "admin" */ './components/tools/AdminDashboard')),
+    },
+    base64FileConverter: {
+      path: '/base64-file-converter',
+      component: lazy(() => import(/* webpackChunkName: "base64-file" */ './components/tools/Base64FileConverter')),
+    },
+    googleDorkGenerator: {
+      path: '/google-dork-generator',
+      component: lazy(() => import(/* webpackChunkName: "dork" */ './components/tools/GoogleDorkGenerator')),
+    },
+    webcamTester: {
+      path: '/tools/webcam-tester',
+      component: lazy(() => import('./components/tools/WebcamTester')),
     },
   },
   pages: {
