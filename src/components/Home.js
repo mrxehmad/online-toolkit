@@ -19,6 +19,7 @@ import {
   FaLockOpen,
   FaSearch,
   FaFileCode,
+  FaCamera,
 } from 'react-icons/fa';
 import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
@@ -157,6 +158,12 @@ function Home() {
         path: '/google-dork-generator',
         icon: <FaSearch />,
       },
+      {
+        name: 'Webcam Tester',
+        description: 'Test your webcam, take a picture or record a video, and view detailed webcam information.',
+        path: '/webcam-tester',
+        icon: <FaCamera />,
+      },
     ],
     'Social Media Tools': [
       {
@@ -216,11 +223,6 @@ function Home() {
             </div>
           ))}
         </div>
-
-        <a href="/tools/webcam-tester" className="tool-card">
-          <div className="tool-card-title">Webcam Tester</div>
-          <div className="tool-card-desc">Test your webcam, take a picture or record a video, and view detailed webcam information.</div>
-        </a>
       </div>
     </div>
   );

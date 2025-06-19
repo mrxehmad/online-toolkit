@@ -7,8 +7,8 @@ function Navbar() {
   const categories = {
     'Social': ['/social-media-analyzer', '/hashtag-generator'],
     'Finance': ['/mortgage-calculator', '/investment-calculator', '/tax-calculator', '/net-income-tax-calculator'],
-    'Cryptographic': ['/crypto-converter', '/base64-converter', '/string-obfuscator', '/uuid-generator'],
-    'Developers': ['/browser-info-detector', '/code-formatter', '/json-validator', '/curl-generator', '/markdown-to-html', '/pihole-regex-generator', '/crontab-generator', '/yaml-formatter', '/port-generator', '/docker-converter', '/chmod-calculator'],
+    'Cryptographic': ['/crypto-converter', '/base64-converter', '/string-obfuscator', '/uuid-generator', '/base64-file-converter'],
+    'Developers': ['/browser-info-detector', '/code-formatter', '/json-validator', '/curl-generator', '/markdown-to-html', '/pihole-regex-generator', '/crontab-generator', '/yaml-formatter', '/port-generator', '/docker-converter', '/chmod-calculator', '/webcam-tester'],
   };
 
   return (

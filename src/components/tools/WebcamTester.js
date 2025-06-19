@@ -53,7 +53,25 @@ const WebcamTester = () => {
   const [devices, setDevices] = useState([]);
   const [selectedDeviceId, setSelectedDeviceId] = useState('');
   const [error, setError] = useState('');
-  const [videoDimensions, setVideoDimensions] = useState({ width: 320, height: 180 });
+
+  // Responsive video width based on window size
+  const getResponsiveVideoWidth = () => {
+    if (typeof window === 'undefined') return 320;
+    const max = 640;
+    const minMargin = 100 * 2;
+    const available = window.innerWidth - minMargin;
+    return Math.max(320, Math.min(max, available));
+  };
+  const [videoDimensions, setVideoDimensions] = useState({ width: getResponsiveVideoWidth(), height: Math.round(getResponsiveVideoWidth() * 9 / 16) });
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      const width = getResponsiveVideoWidth();
+      setVideoDimensions({ width, height: Math.round(width * 9 / 16) });
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const getWebcamInfo = async (stream) => {
     const videoTrack = stream.getVideoTracks()[0];
@@ -91,9 +109,7 @@ const WebcamTester = () => {
       const videoTrack = newStream.getVideoTracks()[0];
       const settings = videoTrack.getSettings();
       if (settings.width && settings.height) {
-        setVideoDimensions({ width: settings.width, height: settings.height });
-      } else {
-        setVideoDimensions({ width: 320, height: 180 });
+        setVideoDimensions({ width: getResponsiveVideoWidth(), height: Math.round(getResponsiveVideoWidth() * 9 / 16) });
       }
       getWebcamInfo(newStream);
       // Get audio info
@@ -102,6 +118,7 @@ const WebcamTester = () => {
         ...prev,
         builtInMicrophone: audioTrack ? audioTrack.label : '—',
       }));
+      setError(''); // Clear error on success
     } catch (err) {
       if (err.name === 'NotAllowedError' || err.name === 'PermissionDeniedError') {
         setError('Camera access was denied. Please allow camera permissions in your browser settings and reload the page.');
@@ -201,7 +218,7 @@ const WebcamTester = () => {
   }, []);
 
   return (
-    <div className="webcam-tester max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-8">
+    <div className="webcam-tester bg-white rounded-lg shadow-lg mt-8 mx-0 md:mx-[100px] max-w-4xl p-4 md:p-8 flex flex-col items-center">
       <h2 className="text-2xl font-bold mb-4 text-center">Webcam Tester</h2>
       {error && <div className="mb-4 p-2 bg-red-100 text-red-700 rounded">{error}</div>}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
@@ -236,7 +253,7 @@ const WebcamTester = () => {
           ref={videoRef}
           autoPlay
           playsInline
-          className="rounded border bg-black"
+          className="rounded border bg-black w-full max-w-[640px] aspect-video"
           style={{ width: videoDimensions.width, height: videoDimensions.height, background: '#000', objectFit: 'cover' }}
         />
         <canvas ref={canvasRef} style={{ display: 'none' }} />
