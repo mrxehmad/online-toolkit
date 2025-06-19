@@ -1,4 +1,6 @@
 import React, { useRef, useState } from 'react';
+import { useTheme } from '../../context/ThemeContext';
+import MetaTags from '../MetaTags';
 
 const initialInfo = {
   webcamName: 'Not selected',
@@ -42,6 +44,7 @@ function getAverageRGB(imgEl) {
 }
 
 const WebcamTester = () => {
+  const { darkMode } = useTheme();
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const [stream, setStream] = useState(null);
@@ -218,87 +221,99 @@ const WebcamTester = () => {
   }, []);
 
   return (
-    <div className="webcam-tester bg-white rounded-lg shadow-lg mt-8 mx-0 md:mx-[100px] max-w-4xl p-4 md:p-8 flex flex-col items-center">
-      <h2 className="text-2xl font-bold mb-4 text-center">Webcam Tester</h2>
-      {error && <div className="mb-4 p-2 bg-red-100 text-red-700 rounded">{error}</div>}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
-        <div className="flex flex-col gap-2">
-          <label className="font-semibold">Available Cameras:</label>
-          <select
-            className="border rounded px-2 py-1"
-            value={selectedDeviceId}
-            onChange={e => setSelectedDeviceId(e.target.value)}
-            disabled={!!stream}
-          >
-            {devices.map((d) => (
-              <option key={d.deviceId} value={d.deviceId}>{d.label || 'Camera'}</option>
-            ))}
-          </select>
-        </div>
-        <div className="flex flex-wrap gap-2 justify-center md:justify-end">
-          <button onClick={startCamera} disabled={!!stream} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50">Start Camera</button>
-          <button onClick={stopCamera} disabled={!stream} className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 disabled:opacity-50">Stop Camera</button>
-          <button onClick={takePicture} disabled={!stream} className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 disabled:opacity-50">Take Picture</button>
-          <button
-            onClick={recording ? stopRecording : startRecording}
-            disabled={!stream}
-            className={`px-4 py-2 rounded text-white ${recording ? 'bg-red-600 hover:bg-red-700' : 'bg-purple-600 hover:bg-purple-700'} disabled:opacity-50`}
-          >
-            {recording ? 'Stop Recording' : 'Record Video'}
-          </button>
+    <>
+      <MetaTags
+        title="Webcam Tester"
+        description="Test your webcam, take a picture or record a video, and view detailed webcam information."
+        keywords={["webcam tester", "camera test", "video test", "webcam info", "camera permissions"]}
+        canonicalUrl="/webcam-tester"
+      />
+      <div className={`min-h-screen py-12 px-4 sm:px-6 lg:px-8 ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'}`}>
+        <div className="max-w-4xl mx-auto">
+          <div className={`p-6 rounded-lg shadow-lg ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>  
+            <h1 className="text-3xl font-bold mb-8 text-center">Webcam Tester</h1>
+            {error && <div className="mb-4 p-2 bg-red-100 text-red-700 rounded text-center">{error}</div>}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+              <div className="flex flex-col gap-2 w-full md:w-1/3">
+                <label className="font-semibold">Available Cameras:</label>
+                <select
+                  className="border rounded px-2 py-1 text-black"
+                  value={selectedDeviceId}
+                  onChange={e => setSelectedDeviceId(e.target.value)}
+                  disabled={!!stream}
+                >
+                  {devices.map((d) => (
+                    <option key={d.deviceId} value={d.deviceId}>{d.label || 'Camera'}</option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-end w-full md:w-2/3">
+                <button onClick={startCamera} disabled={!!stream} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50">Start Camera</button>
+                <button onClick={stopCamera} disabled={!stream} className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 disabled:opacity-50">Stop Camera</button>
+                <button onClick={takePicture} disabled={!stream} className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 disabled:opacity-50">Take Picture</button>
+                <button
+                  onClick={recording ? stopRecording : startRecording}
+                  disabled={!stream}
+                  className={`px-4 py-2 rounded text-white ${recording ? 'bg-red-600 hover:bg-red-700' : 'bg-purple-600 hover:bg-purple-700'} disabled:opacity-50`}
+                >
+                  {recording ? 'Stop Recording' : 'Record Video'}
+                </button>
+              </div>
+            </div>
+            <div className="flex flex-col items-center mb-6">
+              <video
+                ref={videoRef}
+                autoPlay
+                playsInline
+                className="rounded border bg-black w-full max-w-[640px] aspect-video"
+                style={{ width: videoDimensions.width, height: videoDimensions.height, background: '#000', objectFit: 'cover' }}
+              />
+              <canvas ref={canvasRef} style={{ display: 'none' }} />
+            </div>
+            {capturedImage && (
+              <div className="mb-6 text-center">
+                <h4 className="font-semibold mb-2">Captured Image</h4>
+                <img src={capturedImage} alt="Captured" className="mx-auto rounded border" style={{ maxWidth: 320 }} />
+              </div>
+            )}
+            {capturedVideo && (
+              <div className="mb-6 text-center">
+                <h4 className="font-semibold mb-2">Captured Video</h4>
+                <video src={capturedVideo} controls className="mx-auto rounded border" style={{ maxWidth: 320 }} />
+              </div>
+            )}
+            <h2 className="text-xl font-bold mt-8 mb-4 text-center">Webcam Information</h2>
+            <div className="overflow-x-auto">
+              <table className={`min-w-full border text-sm ${darkMode ? 'border-gray-700' : 'border-gray-300'}`}>
+                <tbody>
+                  <tr><td className="font-semibold p-2">Webcam Name:</td><td className="p-2">{info.webcamName}</td></tr>
+                  <tr><td className="font-semibold p-2">Quality Rating:</td><td className="p-2">{info.qualityRating}</td></tr>
+                  <tr><td className="font-semibold p-2">Built-in Microphone:</td><td className="p-2">{info.builtInMicrophone}</td></tr>
+                  <tr><td className="font-semibold p-2">Built-in Speaker:</td><td className="p-2">{info.builtInSpeaker}</td></tr>
+                  <tr><td className="font-semibold p-2">Frame rate:</td><td className="p-2">{info.frameRate}</td></tr>
+                  <tr><td className="font-semibold p-2">Stream Type:</td><td className="p-2">{info.streamType}</td></tr>
+                  <tr><td className="font-semibold p-2">Image Mode:</td><td className="p-2">{info.imageMode}</td></tr>
+                  <tr><td className="font-semibold p-2">Webcam MegaPixels:</td><td className="p-2">{info.webcamMegaPixels}</td></tr>
+                  <tr><td className="font-semibold p-2">Webcam Resolution:</td><td className="p-2">{info.webcamResolution}</td></tr>
+                  <tr><td className="font-semibold p-2">Video Standard:</td><td className="p-2">{info.videoStandard}</td></tr>
+                  <tr><td className="font-semibold p-2">Aspect Ratio:</td><td className="p-2">{info.aspectRatio}</td></tr>
+                  <tr><td className="font-semibold p-2">PNG File Size:</td><td className="p-2">{info.pngFileSize}</td></tr>
+                  <tr><td className="font-semibold p-2">JPEG File Size:</td><td className="p-2">{info.jpegFileSize}</td></tr>
+                  <tr><td className="font-semibold p-2">Bitrate:</td><td className="p-2">{info.bitrate}</td></tr>
+                  <tr><td className="font-semibold p-2">Number of Colors:</td><td className="p-2">{info.numberOfColors}</td></tr>
+                  <tr><td className="font-semibold p-2">Average RGB Color:</td><td className="p-2">{info.averageRGBColor}</td></tr>
+                  <tr><td className="font-semibold p-2">Lightness:</td><td className="p-2">{info.lightness}</td></tr>
+                  <tr><td className="font-semibold p-2">Luminosity:</td><td className="p-2">{info.luminosity}</td></tr>
+                  <tr><td className="font-semibold p-2">Brightness:</td><td className="p-2">{info.brightness}</td></tr>
+                  <tr><td className="font-semibold p-2">Hue:</td><td className="p-2">{info.hue}</td></tr>
+                  <tr><td className="font-semibold p-2">Saturation:</td><td className="p-2">{info.saturation}</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="flex flex-col items-center mb-4">
-        <video
-          ref={videoRef}
-          autoPlay
-          playsInline
-          className="rounded border bg-black w-full max-w-[640px] aspect-video"
-          style={{ width: videoDimensions.width, height: videoDimensions.height, background: '#000', objectFit: 'cover' }}
-        />
-        <canvas ref={canvasRef} style={{ display: 'none' }} />
-      </div>
-      {capturedImage && (
-        <div className="mb-4 text-center">
-          <h4 className="font-semibold mb-2">Captured Image</h4>
-          <img src={capturedImage} alt="Captured" className="mx-auto rounded border" style={{ maxWidth: 320 }} />
-        </div>
-      )}
-      {capturedVideo && (
-        <div className="mb-4 text-center">
-          <h4 className="font-semibold mb-2">Captured Video</h4>
-          <video src={capturedVideo} controls className="mx-auto rounded border" style={{ maxWidth: 320 }} />
-        </div>
-      )}
-      <h3 className="text-xl font-bold mt-6 mb-2">Webcam Information</h3>
-      <div className="overflow-x-auto">
-        <table className="min-w-full border text-sm">
-          <tbody>
-            <tr><td className="font-semibold">Webcam Name:</td><td>{info.webcamName}</td></tr>
-            <tr><td className="font-semibold">Quality Rating:</td><td>{info.qualityRating}</td></tr>
-            <tr><td className="font-semibold">Built-in Microphone:</td><td>{info.builtInMicrophone}</td></tr>
-            <tr><td className="font-semibold">Built-in Speaker:</td><td>{info.builtInSpeaker}</td></tr>
-            <tr><td className="font-semibold">Frame rate:</td><td>{info.frameRate}</td></tr>
-            <tr><td className="font-semibold">Stream Type:</td><td>{info.streamType}</td></tr>
-            <tr><td className="font-semibold">Image Mode:</td><td>{info.imageMode}</td></tr>
-            <tr><td className="font-semibold">Webcam MegaPixels:</td><td>{info.webcamMegaPixels}</td></tr>
-            <tr><td className="font-semibold">Webcam Resolution:</td><td>{info.webcamResolution}</td></tr>
-            <tr><td className="font-semibold">Video Standard:</td><td>{info.videoStandard}</td></tr>
-            <tr><td className="font-semibold">Aspect Ratio:</td><td>{info.aspectRatio}</td></tr>
-            <tr><td className="font-semibold">PNG File Size:</td><td>{info.pngFileSize}</td></tr>
-            <tr><td className="font-semibold">JPEG File Size:</td><td>{info.jpegFileSize}</td></tr>
-            <tr><td className="font-semibold">Bitrate:</td><td>{info.bitrate}</td></tr>
-            <tr><td className="font-semibold">Number of Colors:</td><td>{info.numberOfColors}</td></tr>
-            <tr><td className="font-semibold">Average RGB Color:</td><td>{info.averageRGBColor}</td></tr>
-            <tr><td className="font-semibold">Lightness:</td><td>{info.lightness}</td></tr>
-            <tr><td className="font-semibold">Luminosity:</td><td>{info.luminosity}</td></tr>
-            <tr><td className="font-semibold">Brightness:</td><td>{info.brightness}</td></tr>
-            <tr><td className="font-semibold">Hue:</td><td>{info.hue}</td></tr>
-            <tr><td className="font-semibold">Saturation:</td><td>{info.saturation}</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    </>
   );
 };
 

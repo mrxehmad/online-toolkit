@@ -28,6 +28,7 @@ A collection of useful online tools for developers, designers, and general users
 - Docker Run to Compose
 - Chmod Calculator
 - YAML Formatter
+- Webcam Tester
 
 ### Social Media Tools
 - Social Media Analyzer
@@ -40,6 +41,9 @@ A collection of useful online tools for developers, designers, and general users
 - Easy to use interface
 - Real-time updates
 - Copy to clipboard functionality
+- Webcam testing with live video, image capture, video recording, and detailed webcam info
+
+> **Note:** The Webcam Tester tool requires camera permissions. If prompted, please allow camera access in your browser for full functionality.
 
 ## Getting Started
 
