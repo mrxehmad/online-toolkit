@@ -47,6 +47,10 @@ export const routes = {
       path: '/markdown-to-html',
       component: lazy(() => import(/* webpackChunkName: "markdown" */ './components/tools/MarkdownToHtml')),
     },
+    wysiwygMarkdownNotes: {
+      path: '/wysiwyg-markdown-notes',
+      component: lazy(() => import(/* webpackChunkName: "wysiwyg-notes" */ './components/tools/WysiwygMarkdownNotes')),
+    },
     netIncomeTaxCalculator: {
       path: '/net-income-tax-calculator',
       component: lazy(() => import(/* webpackChunkName: "net-tax" */ './components/tools/NetIncomeTaxCalculator')),

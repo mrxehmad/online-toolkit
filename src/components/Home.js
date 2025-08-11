@@ -119,6 +119,12 @@ function Home() {
         icon: <FaMarkdown />,
       },
       {
+        name: 'WYSIWYG Markdown Notes',
+        description: 'Rich-text notes with Markdown export and live preview',
+        path: '/wysiwyg-markdown-notes',
+        icon: <FaMarkdown />,
+      },
+      {
         name: 'Pi-hole Regex Generator',
         description: 'Create regex patterns for Pi-hole domain blocking',
         path: '/pihole-regex-generator',
