@@ -103,6 +103,14 @@ export const routes = {
       path: '/webcam-tester',
       component: lazy(() => import('./components/tools/WebcamTester')),
     },
+    screenRecorder: {
+      path: '/screen-recorder',
+      component: lazy(() => import(/* webpackChunkName: "screen-recorder" */ './components/tools/ScreenRecorder')),
+    },
+    audioRecorder: {
+      path: '/audio-recorder',
+      component: lazy(() => import(/* webpackChunkName: "audio-recorder" */ './components/tools/AudioRecorder')),
+    },
   },
   pages: {
     home: {

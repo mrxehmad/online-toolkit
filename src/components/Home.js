@@ -20,6 +20,8 @@ import {
   FaSearch,
   FaFileCode,
   FaCamera,
+  FaVideo,
+  FaMicrophone,
 } from 'react-icons/fa';
 import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
@@ -177,6 +179,20 @@ function Home() {
         description: 'Generate relevant hashtags for your content',
         path: '/hashtag-generator',
         icon: <FaHashtag />,
+      },
+    ],
+    'Media Tools': [
+      {
+        name: 'Screen Recorder',
+        description: 'Record your screen and download the video',
+        path: '/screen-recorder',
+        icon: <FaVideo />,
+      },
+      {
+        name: 'Audio Recorder',
+        description: 'Record audio from your microphone and download it',
+        path: '/audio-recorder',
+        icon: <FaMicrophone />,
       },
     ],
   };
