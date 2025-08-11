@@ -137,8 +137,13 @@ function AudioRecorder() {
     showMessage('Download started!', 'success');
   };
 
-  // Check browser support
-  const isSupported = !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+  // Improved browser support check
+  const isSupported = !!(
+    navigator.mediaDevices &&
+    navigator.mediaDevices.getUserMedia &&
+    window.MediaRecorder &&
+    (window.MediaRecorder.isTypeSupported('audio/webm') || window.MediaRecorder.isTypeSupported('audio/webm;codecs=opus'))
+  );
 
   return (
     <div style={{
