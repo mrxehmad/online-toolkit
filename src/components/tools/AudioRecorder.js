@@ -137,7 +137,16 @@ function AudioRecorder() {
     showMessage('Download started!', 'success');
   };
 
-  // Improved browser support check
+  // Improved browser support check with debug
+  let debugSupport = [];
+  if (navigator.mediaDevices) debugSupport.push('mediaDevices');
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) debugSupport.push('getUserMedia');
+  if (window.MediaRecorder) debugSupport.push('MediaRecorder');
+  if (window.MediaRecorder && window.MediaRecorder.isTypeSupported) {
+    if (window.MediaRecorder.isTypeSupported('audio/webm')) debugSupport.push('audio/webm');
+    if (window.MediaRecorder.isTypeSupported('audio/webm;codecs=opus')) debugSupport.push('opus');
+  }
+  console.log('AudioRecorder support debug:', debugSupport);
   const isSupported = !!(
     navigator.mediaDevices &&
     navigator.mediaDevices.getUserMedia &&
