@@ -69,77 +69,21 @@ export default function IOSNotesApp() {
   const [saveStatus, setSaveStatus] = useState('');
   const editorRef = useRef(null);
 
-
-
-  // Auto-save effect
-  useEffect(() => {
-    const saveTimer = setTimeout(() => {
-      if (activeId && editorRef.current) {
-        saveActiveNote();
-      }
-    }, 1000);
-
-    return () => clearTimeout(saveTimer);
-  }, [notes, activeId, saveActiveNote]);
-
-  // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeydown = (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
-        e.preventDefault();
-        saveActiveNote();
-      }
-    };
-
-    window.addEventListener('keydown', handleKeydown);
-    return () => window.removeEventListener('keydown', handleKeydown);
-  }, [saveActiveNote]);
-
-  const createNote = useCallback(() => {
-    const id = Date.now().toString();
-    const newNote = {
-      id,
-      title: 'New Note',
-      html: '<p>Start typing...</p>',
-      updatedAt: new Date().toISOString(),
-    };
-    
-    setNotes(prev => [newNote, ...prev]);
-    setActiveId(id);
-    
-    setTimeout(() => {
-      if (editorRef.current) {
-        editorRef.current.focus();
-        const range = document.createRange();
-        range.selectNodeContents(editorRef.current);
-        range.collapse(false);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-      }
-    }, 100);
-  }, []);
-
+  // Save the active note's HTML content
   const updateActiveNote = useCallback((html) => {
     if (!activeId) return;
-    
-    setNotes(prev => prev.map(note => 
-      note.id === activeId 
+    setNotes(prev => prev.map(note =>
+      note.id === activeId
         ? { ...note, html, updatedAt: new Date().toISOString() }
         : note
     ));
   }, [activeId]);
 
-  const getActiveNote = useCallback(() => {
-    return notes.find(note => note.id === activeId) || null;
-  }, [notes, activeId]);
-
+  // Save the active note (used in effects and toolbar)
   const saveActiveNote = useCallback(() => {
     if (!editorRef.current || !activeId) return;
-    
     const html = editorRef.current.innerHTML;
     updateActiveNote(html);
-    
     setSaveStatus('Saved');
     setTimeout(() => setSaveStatus(''), 2000);
   }, [activeId, updateActiveNote]);
@@ -190,6 +134,78 @@ export default function IOSNotesApp() {
       return filtered;
     });
   };
+
+  // Auto-save effect
+  useEffect(() => {
+    const saveTimer = setTimeout(() => {
+      if (activeId && editorRef.current) {
+        saveActiveNote();
+      }
+    }, 1000);
+
+    return () => clearTimeout(saveTimer);
+  }, [notes, activeId, saveActiveNote]);
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeydown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+        e.preventDefault();
+        saveActiveNote();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeydown);
+    return () => window.removeEventListener('keydown', handleKeydown);
+  }, [saveActiveNote]);
+
+  const createNote = useCallback(() => {
+    const id = Date.now().toString();
+    const newNote = {
+      id,
+      title: 'New Note',
+      html: '<p>Start typing...</p>',
+      updatedAt: new Date().toISOString(),
+    };
+    
+    setNotes(prev => [newNote, ...prev]);
+    setActiveId(id);
+    
+    setTimeout(() => {
+      if (editorRef.current) {
+        editorRef.current.focus();
+        const range = document.createRange();
+        range.selectNodeContents(editorRef.current);
+        range.collapse(false);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+    }, 100);
+  }, []);
+
+  const getActiveNote = useCallback(() => {
+    return notes.find(note => note.id === activeId) || null;
+  }, [notes, activeId]);
+
+  // Load notes from localStorage on mount
+  useEffect(() => {
+    const stored = localStorage.getItem('ios_notes');
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setNotes(parsed);
+          setActiveId(parsed[0].id);
+        }
+      } catch {}
+    }
+  }, []);
+
+  // Save notes to localStorage whenever notes change
+  useEffect(() => {
+    localStorage.setItem('ios_notes', JSON.stringify(notes));
+  }, [notes]);
 
 
   const filteredNotes = notes.filter(note => {
