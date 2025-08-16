@@ -18,7 +18,7 @@ const styles = {
 
 function ScreenRecorder() {
   const [recording, setRecording] = useState(false);
-  const [processing, setProcessing] = useState(false);
+
   const [downloadUrl, setDownloadUrl] = useState(null);
   const [downloadReady, setDownloadReady] = useState(false);
   const [timer, setTimer] = useState(0);
@@ -29,7 +29,7 @@ function ScreenRecorder() {
   const [loading, setLoading] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
   const [mediaRecorder, setMediaRecorder] = useState(null);
-  const [recordedChunks, setRecordedChunks] = useState([]);
+
   const [stream, setStream] = useState(null);
   const timerInterval = useRef(null);
   const startTime = useRef(null);
@@ -92,15 +92,15 @@ function ScreenRecorder() {
       const mr = new window.MediaRecorder(s, options);
       setMediaRecorder(mr);
       recordedChunksRef.current = []; // NEW: reset ref
-      setRecordedChunks([]);
+
       mr.ondataavailable = (event) => {
         if (event.data && event.data.size > 0) {
           recordedChunksRef.current.push(event.data); // NEW: push to ref
-          setRecordedChunks((prev) => [...prev, event.data]);
+
         }
       };
       mr.onstop = () => {
-        setProcessing(false);
+
         setRecording(false);
         setStatus('Complete');
         const chunks = recordedChunksRef.current; // NEW: use ref
@@ -136,7 +136,7 @@ function ScreenRecorder() {
       setTimer(0);
       timerInterval.current = setInterval(updateTimer, 1000);
       setRecording(true);
-      setProcessing(false);
+      
       setStatus('Recording');
       setShowPreview(false);
       setDownloadReady(false);
@@ -172,7 +172,7 @@ function ScreenRecorder() {
       clearInterval(timerInterval.current);
     }
     setRecording(false);
-    setProcessing(true);
+    
     setStatus('Processing...');
   };
 

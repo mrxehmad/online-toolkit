@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 
 function AudioRecorder() {
   const [recording, setRecording] = useState(false);
-  const [processing, setProcessing] = useState(false);
+
   const [downloadUrl, setDownloadUrl] = useState(null);
   const [downloadReady, setDownloadReady] = useState(false);
   const [timer, setTimer] = useState(0);
@@ -51,7 +51,7 @@ function AudioRecorder() {
         }
       };
       mr.onstop = () => {
-        setProcessing(false);
+
         setRecording(false);
         setStatus('Complete');
         const chunks = recordedChunksRef.current;
@@ -82,7 +82,7 @@ function AudioRecorder() {
       setTimer(0);
       timerInterval.current = setInterval(updateTimer, 1000);
       setRecording(true);
-      setProcessing(false);
+      
       setStatus('Recording');
       setShowPreview(false);
       setDownloadReady(false);
@@ -118,7 +118,7 @@ function AudioRecorder() {
       clearInterval(timerInterval.current);
     }
     setRecording(false);
-    setProcessing(true);
+    
     setStatus('Processing...');
   };
 

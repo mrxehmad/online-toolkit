@@ -115,6 +115,14 @@ export const routes = {
       path: '/audio-recorder',
       component: lazy(() => import(/* webpackChunkName: "audio-recorder" */ './components/tools/AudioRecorder')),
     },
+    youtubeThumbnailDownloader: {
+      path: '/youtube-thumbnail-downloader',
+      component: lazy(() => import(/* webpackChunkName: "youtube-thumbnail" */ './components/tools/ytthumbnail')),
+    },
+    youtubeCaptionDownloader: {
+      path: '/youtube-caption-downloader',
+      component: lazy(() => import(/* webpackChunkName: "youtube-caption" */ './components/tools/ytSRT')),
+    },
   },
   pages: {
     home: {

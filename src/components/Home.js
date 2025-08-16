@@ -22,6 +22,7 @@ import {
   FaCamera,
   FaVideo,
   FaMicrophone,
+  FaYoutube,
 } from 'react-icons/fa';
 import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
@@ -199,6 +200,18 @@ function Home() {
         description: 'Record audio from your microphone and download it',
         path: '/audio-recorder',
         icon: <FaMicrophone />,
+      },
+      {
+        name: 'YouTube Thumbnail Downloader',
+        description: 'Download high-quality thumbnails from YouTube videos',
+        path: '/youtube-thumbnail-downloader',
+        icon: <FaYoutube />,
+      },
+      {
+        name: 'YouTube Caption Downloader',
+        description: 'Download captions from YouTube videos',
+        path: '/youtube-caption-downloader',
+        icon: <FaYoutube />,
       },
     ],
   };
