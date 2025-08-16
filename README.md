@@ -2,6 +2,8 @@
 
 A collection of useful online tools for developers, designers, and general users.
 
+> [!NOTE]
+> Its a completely static site. no backend no tracking **just you and your browser**
 ## Available Tools
 
 ### Finance Tools
