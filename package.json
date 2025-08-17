@@ -21,6 +21,7 @@
     "lucide-react": "^0.539.0",
     "marked": "^4.0.0",
     "os-browserify": "^0.3.0",
+    "papaparse": "^5.5.3",
     "path-browserify": "^1.0.1",
     "querystring-es3": "^0.2.1",
     "react": "^19.0.0",

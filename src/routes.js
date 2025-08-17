@@ -131,6 +131,14 @@ export const routes = {
       path: '/image-compressor',
       component: lazy(() => import(/* webpackChunkName: "image-compressor" */ './components/tools/image-compress')),
     },
+    videoGifConverter: {
+      path: '/video-gif-converter',
+      component: lazy(() => import(/* webpackChunkName: "video-gif" */ './components/tools/videotogif')),
+    },
+    csvToExcel: {
+      path: '/csv-to-excel',
+      component: lazy(() => import(/* webpackChunkName: "csv-to-excel" */ './components/tools/csvtoexl')),
+    },
   },
   pages: {
     home: {

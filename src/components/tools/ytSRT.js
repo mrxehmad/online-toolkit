@@ -497,10 +497,7 @@ const YouTubeCaptionDownloader = () => {
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="text-center mt-12 text-gray-500">
-          <p>© 2025 YouTube Caption Downloader. Free subtitle and transcript download tool for creators and learners worldwide.</p>
-        </div>
+       
       </div>
     </div>
   );

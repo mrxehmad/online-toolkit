@@ -24,6 +24,8 @@ import {
   FaMicrophone,
   FaYoutube,
   FaImage,
+  FaFilm,
+  FaFileExcel,
 } from 'react-icons/fa';
 import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
@@ -225,6 +227,18 @@ function Home() {
         description: 'Compress images to reduce file size',
         path: '/image-compressor',
         icon: <FaImage />,
+      },
+      {
+        name: 'Video to GIF Converter',
+        description: 'Convert videos to high-quality GIFs',
+        path: '/video-gif-converter',
+        icon: <FaFilm />,
+      },
+      {
+        name: 'CSV to Excel Converter',
+        description: 'Convert CSV files to Excel format',
+        path: '/csv-to-excel',
+        icon: <FaFileExcel />,
       },
     ],
   };
