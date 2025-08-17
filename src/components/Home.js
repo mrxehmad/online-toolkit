@@ -23,6 +23,7 @@ import {
   FaVideo,
   FaMicrophone,
   FaYoutube,
+  FaImage,
 } from 'react-icons/fa';
 import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
@@ -212,6 +213,18 @@ function Home() {
         description: 'Download captions from YouTube videos',
         path: '/youtube-caption-downloader',
         icon: <FaYoutube />,
+      },
+      {
+        name: 'Resume Builder',
+        description: 'Create a professional resume with a modern template',
+        path: '/resume-builder',
+        icon: <FaFileAlt />,
+      },
+      {
+        name: 'Image Compressor',
+        description: 'Compress images to reduce file size',
+        path: '/image-compressor',
+        icon: <FaImage />,
       },
     ],
   };

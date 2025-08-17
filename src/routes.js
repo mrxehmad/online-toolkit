@@ -123,6 +123,14 @@ export const routes = {
       path: '/youtube-caption-downloader',
       component: lazy(() => import(/* webpackChunkName: "youtube-caption" */ './components/tools/ytSRT')),
     },
+    resumeBuilder: {
+      path: '/resume-builder',
+      component: lazy(() => import(/* webpackChunkName: "resume" */ './components/tools/resumebuilder')),
+    },
+    imageCompressor: {
+      path: '/image-compressor',
+      component: lazy(() => import(/* webpackChunkName: "image-compressor" */ './components/tools/image-compress')),
+    },
   },
   pages: {
     home: {
