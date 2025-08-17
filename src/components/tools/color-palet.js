@@ -452,13 +452,6 @@ ${colors.map((color, index) => `  --primary-${index + 1}: ${color};`).join('\n')
         </div>
       </main>
       
-      {/* Footer */}
-      <footer className="bg-white border-t py-6 sm:py-8">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 text-center text-gray-600">
-          <p className="text-sm sm:text-base">&copy; 2025 Color Palette Generator. Generate beautiful color schemes for your designs.</p>
-          <p className="mt-2 text-xs sm:text-sm">All processing happens in your browser. No data is sent to servers.</p>
-        </div>
-      </footer>
     </div>
   );
 };
