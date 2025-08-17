@@ -26,6 +26,7 @@ import {
   FaImage,
   FaFilm,
   FaFileExcel,
+  FaPalette,
 } from 'react-icons/fa';
 import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
@@ -239,6 +240,12 @@ function Home() {
         description: 'Convert CSV files to Excel format',
         path: '/csv-to-excel',
         icon: <FaFileExcel />,
+      },
+      {
+        name: 'Color Palette Generator',
+        description: 'Generate color palettes for your designs',
+        path: '/color-palette-generator',
+        icon: <FaPalette />,
       },
     ],
   };

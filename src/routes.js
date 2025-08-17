@@ -139,6 +139,10 @@ export const routes = {
       path: '/csv-to-excel',
       component: lazy(() => import(/* webpackChunkName: "csv-to-excel" */ './components/tools/csvtoexl')),
     },
+    colorPaletteGenerator: {
+      path: '/color-palette-generator',
+      component: lazy(() => import(/* webpackChunkName: "color-palette" */ './components/tools/color-palet')),
+    },
   },
   pages: {
     home: {
