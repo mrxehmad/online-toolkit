@@ -1,6 +1,6 @@
 {
   "name": "toolkit-website",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
     "@emotion/react": "^11.0.0",
