@@ -6,10 +6,11 @@ function Navbar() {
 
   const categories = {
     'Social': ['/social-media-analyzer', '/hashtag-generator'],
-    'Finance': ['/mortgage-calculator', '/investment-calculator', '/tax-calculator', '/net-income-tax-calculator'],
+    'Finance': ['/mortgage-calculator', '/investment-calculator', '/tax-calculator', '/net-income-tax-calculator', '/stock-crypto-tracker'],
     'Cryptographic': ['/crypto-converter', '/base64-converter', '/string-obfuscator', '/uuid-generator', '/base64-file-converter'],
     'Developers': ['/browser-info-detector', '/code-formatter', '/json-validator', '/curl-generator', '/markdown-to-html', '/pihole-regex-generator', '/crontab-generator', '/yaml-formatter', '/port-generator', '/docker-converter', '/chmod-calculator', '/webcam-tester'],
-    'Media': ['/screen-recorder', '/audio-recorder', '/youtube-thumbnail-downloader', '/youtube-caption-downloader', '/video-gif-converter', '/csv-to-excel', '/color-palette-generator'],
+    'Media': ['/screen-recorder', '/audio-recorder', '/youtube-thumbnail-downloader', '/youtube-caption-downloader', '/video-gif-converter', '/csv-to-excel', '/color-palette-generator', '/csv-graphs', '/regex-playground'],
+    'SEO Tools': ['/seo-meta-generator'],
   };
 
   return (

@@ -27,6 +27,10 @@ import {
   FaFilm,
   FaFileExcel,
   FaPalette,
+  FaChartBar,
+  FaCloud,
+  FaTag,
+  FaDollarSign,
 } from 'react-icons/fa';
 import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
 
@@ -59,6 +63,26 @@ function Home() {
         icon: <NetIncomeTaxCalculatorIcon />,
         path: '/net-income-tax-calculator',
       },
+      {
+        name: 'Stock Crypto Tracker',
+        description: 'Track the latest stock and crypto prices',
+        path: '/stock-crypto-tracker',
+        icon: <FaChartLine />,
+      },
+      {
+        name: 'Currency Converter',
+        description: 'Convert currencies between different countries',
+        path: '/currency-converter',
+        icon: <FaDollarSign />,
+      }
+    ],
+    'SEO Tools': [
+      {
+        name: 'SEO Meta Tag Generator',
+        description: 'Generate meta tags for your website',
+        path: '/seo-meta-generator',
+        icon: <FaTag />,
+      }
     ],
     'Cryptographic Tools': [
       {
@@ -247,6 +271,26 @@ function Home() {
         path: '/color-palette-generator',
         icon: <FaPalette />,
       },
+      {
+        name: 'CSV Graphs',
+        description: 'Create graphs from CSV files',
+        path: '/csv-graphs',
+        icon: <FaChartBar />,
+      },
+      {
+        name: 'Regex Playground',
+        description: 'Test and play with regular expressions',
+        path: '/regex-playground',
+        icon: <FaCode />,
+      },
+    ],
+    'Productivity Tools': [
+      {
+        name: 'Weather Dashboard',
+        description: 'Check the weather in your area',
+        path: '/weather-dashboard',
+        icon: <FaCloud />,
+      }
     ],
   };
 

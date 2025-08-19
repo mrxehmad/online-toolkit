@@ -143,6 +143,30 @@ export const routes = {
       path: '/color-palette-generator',
       component: lazy(() => import(/* webpackChunkName: "color-palette" */ './components/tools/color-palet')),
     },
+    csvGraphs: {
+      path: '/csv-graphs',
+      component: lazy(() => import(/* webpackChunkName: "csv-graphs" */ './components/tools/csvgraphs')),
+    },
+    regexPlayground: {
+      path: '/regex-playground',
+      component: lazy(() => import(/* webpackChunkName: "regex-playground" */ './components/tools/regex-playground')),
+    },
+    weatherDashboard: {
+      path: '/weather-dashboard',
+      component: lazy(() => import(/* webpackChunkName: "weather-dashboard" */ './components/tools/weatherapi')),
+    },
+    stockCryptoTracker: {
+      path: '/stock-crypto-tracker',
+      component: lazy(() => import(/* webpackChunkName: "stock-crypto" */ './components/tools/market-tracker')),
+    },  
+    seoMetaGenerator: {
+      path: '/seo-meta-generator',
+      component: lazy(() => import(/* webpackChunkName: "seo-meta" */ './components/tools/meta-tag')),
+    },
+    currencyConverter: {
+      path: '/currency-converter',
+      component: lazy(() => import(/* webpackChunkName: "currency-converter" */ './components/tools/curency-conv')),
+    },
   },
   pages: {
     home: {
