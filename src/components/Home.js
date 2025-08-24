@@ -11,6 +11,7 @@ import {
   FaClock,
   FaLock,
   FaKey,
+  FaBook,
   FaDesktop,
   FaShieldAlt,
   FaRandom,
@@ -31,8 +32,14 @@ import {
   FaCloud,
   FaTag,
   FaDollarSign,
+  FaQrcode,
+  FaKeyboard,
+  FaTwitter,
 } from 'react-icons/fa';
+import { RiRobot2Line } from "react-icons/ri";
+import { SiMoleculer } from "react-icons/si";
 import NetIncomeTaxCalculatorIcon from '@mui/icons-material/Calculate';
+
 
 function Home() {
   const { darkMode } = useTheme();
@@ -74,6 +81,24 @@ function Home() {
         description: 'Convert currencies between different countries',
         path: '/currency-converter',
         icon: <FaDollarSign />,
+      },
+      {
+        name: 'Invoice Generator',
+        description: 'Create professional invoices instantly',
+        path: '/invoice-generator',
+        icon: <FaFileAlt />,
+      },
+      {
+        name: 'EMI Calculator',
+        description: 'Calculate Equated Monthly Installments (EMI) for loans',
+        path: '/emi-calculator',
+        icon: <FaCalculator />,
+      },
+      {
+        name: 'ROI Calculator',
+        description: 'Calculate your return on investment (ROI)',
+        path: '/roi-calculator',
+        icon: <FaChartLine />,
       }
     ],
     'SEO Tools': [
@@ -82,6 +107,30 @@ function Home() {
         description: 'Generate meta tags for your website',
         path: '/seo-meta-generator',
         icon: <FaTag />,
+      },
+      {
+        name: 'Twitter Card Generator',
+        description: 'Generate Twitter Card meta tags for your website',
+        path: '/twitter-card-generator',
+        icon: <FaTwitter />,
+      },
+      {
+        name: 'Robots.txt Generator',
+        description: 'Generate and edit your robots.txt file',
+        path: '/robots-txt-generator',
+        icon: <RiRobot2Line />,
+      },
+      {
+        name: 'XML Sitemap Generator',
+        description: 'Generate XML sitemaps for your website',
+        path: '/xml-sitemap-generator',
+        icon: <FaFileCode />,
+      },
+      {
+        name: 'Keyword Density Checker',
+        description: 'Analyze the keyword density of your text',
+        path: '/keyword-density-checker',
+        icon: <FaSearch />,
       }
     ],
     'Cryptographic Tools': [
@@ -157,6 +206,12 @@ function Home() {
         name: 'Pi-hole Regex Generator',
         description: 'Create regex patterns for Pi-hole domain blocking',
         path: '/pihole-regex-generator',
+        icon: <FaFilter />,
+      },
+      {
+        name: 'Pi-hole Regex Playground',
+        description: 'Test and play with regex patterns for Pi-hole domain blocking',
+        path: '/pihole-regex-playground',
         icon: <FaFilter />,
       },
       {
@@ -242,6 +297,12 @@ function Home() {
         icon: <FaYoutube />,
       },
       {
+        name: 'YouTube Embedding Converter',
+        description: 'Convert YouTube URLs to embedding code',
+        path: '/yt-embading',
+        icon: <FaYoutube />,
+      },
+      {
         name: 'Resume Builder',
         description: 'Create a professional resume with a modern template',
         path: '/resume-builder',
@@ -290,7 +351,37 @@ function Home() {
         description: 'Check the weather in your area',
         path: '/weather-dashboard',
         icon: <FaCloud />,
-      }
+      },
+      {
+        name: 'QR Code Generator',
+        description: 'Generate QR codes for your projects',
+        path: '/qrcode-generator',
+        icon: <FaQrcode />,
+      },
+      {
+        name: 'Molecules Visualizer',
+        description: 'Visualize molecules in 3D',
+        path: '/molecules-visualizer',
+        icon: <SiMoleculer />,
+      },
+      {
+        name: 'Typing Test',
+        description: 'Test your typing speed and accuracy',
+        path: '/typing-test',
+        icon: <FaKeyboard />,
+      },
+      {
+        name: 'Pomodaro Timer',
+        description: 'Manage your time with the Pomodoro Technique',
+        path: '/pomodaro-timer',
+        icon: <FaClock />,
+      },
+      {
+        name: 'Flashcard App',
+        description: 'Create, study, and manage flashcards for effective learning',
+        path: '/flashcard-app',
+        icon: <FaBook />,
+      },
     ],
   };
 

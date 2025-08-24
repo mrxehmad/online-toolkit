@@ -167,6 +167,62 @@ export const routes = {
       path: '/currency-converter',
       component: lazy(() => import(/* webpackChunkName: "currency-converter" */ './components/tools/curency-conv')),
     },
+    qrcodeGenerator: {
+      path: '/qrcode-generator',
+      component: lazy(() => import(/* webpackChunkName: "qrcode" */ './components/tools/qrcode')),
+    },
+    moleculesVisualizer: {
+      path: '/molecules-visualizer',
+      component: lazy(() => import(/* webpackChunkName: "molecules-visualizer" */ './components/tools/molecules-visual')),
+    },
+    typingTest: {
+      path: '/typing-test',
+      component: lazy(() => import(/* webpackChunkName: "typing-test" */ './components/tools/typing-test')),
+    },
+    piholeRegexPlayground: {
+      path: '/pihole-regex-playground',
+      component: lazy(() => import(/* webpackChunkName: "pihole-regex-playground" */ './components/tools/pihole-regex-playground')),
+    },
+    pomodaroTimer: {
+      path: '/pomodaro-timer',
+      component: lazy(() => import(/* webpackChunkName: "pomodaro-timer" */ './components/tools/pomodaro-timer')),
+    },
+    ytEmbading: {
+      path: '/yt-embading',
+      component: lazy(() => import(/* webpackChunkName: "yt-embading" */ './components/tools/yt-embading')),
+    },
+    invoiceGenerator: {
+      path: '/invoice-generator',
+      component: lazy(() => import(/* webpackChunkName: "invoice" */ './components/tools/invoice')),
+    },
+    emiCalculator: {
+      path: '/emi-calculator',
+      component: lazy(() => import(/* webpackChunkName: "emi-calculator" */ './components/tools/emi')),
+    },
+    roiCalculator: {
+      path: '/roi-calculator',
+      component: lazy(() => import(/* webpackChunkName: "roi-calculator" */ './components/tools/roi')),
+    },
+    twitterCardGenerator: {
+      path: '/twitter-card-generator',
+      component: lazy(() => import(/* webpackChunkName: "twitter-card-generator" */ './components/tools/twitter-card-generator')),
+    },
+    FlashcardApp: {
+      path: '/flashcard-app',
+      component: lazy(() => import(/* webpackChunkName: "flashcard-app" */ './components/tools/FlashcardApp')),
+    },
+    RobotsTxtGenerator: {
+      path: '/robots-txt-generator',
+      component: lazy(() => import(/* webpackChunkName: "robots-txt-generator" */ './components/tools/RobotsTxtGenerator')),
+    },
+    XMLSitemapGenerator: {
+      path: '/xml-sitemap-generator',
+      component: lazy(() => import(/* webpackChunkName: "xml-sitemap-generator" */ './components/tools/XMLSitemapGenerator')),
+    },
+    KeywordDensityChecker: {
+      path: '/keyword-density-checker',
+      component: lazy(() => import(/* webpackChunkName: "keyword-density-checker" */ './components/tools/KeywordDensityChecker')),
+    }
   },
   pages: {
     home: {
