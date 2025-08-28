@@ -222,7 +222,179 @@ export const routes = {
     KeywordDensityChecker: {
       path: '/keyword-density-checker',
       component: lazy(() => import(/* webpackChunkName: "keyword-density-checker" */ './components/tools/KeywordDensityChecker')),
-    }
+    },
+    AltTextFinder: {
+      path: '/alt-text-finder',
+      component: lazy(() => import(/* webpackChunkName: "alt-text-finder" */ './components/tools/AltTextFinder')),
+    },
+    CanonicalTagGenerator: {
+      path: '/canonical-tag-generator',
+      component: lazy(() => import(/* webpackChunkName: "canonical-tag-generator" */ './components/tools/CanonicalTagGenerator')),
+    },
+    HreflangGenerator: {
+      path: '/hreflang-generator',
+      component: lazy(() => import(/* webpackChunkName: "hreflang-generator" */ './components/tools/HreflangGenerator')),
+    },
+    MapsEmbedGenerator: {
+      path: '/maps-embed-generator',
+      component: lazy(() => import(/* webpackChunkName: "maps-embed-generator" */ './components/tools/MapsEmbedGenerator')),
+    },
+    BMICalculator: {
+      path: '/bmi-calculator',
+      component: lazy(() => import(/* webpackChunkName: "bmi-calculator" */ './components/tools/BMICalculator')),
+    },
+    FaviconGenerator: {
+      path: '/favicon-generator',
+      component: lazy(() => import(/* webpackChunkName: "favicon-generator" */ './components/tools/FaviconGenerator')),
+    },
+    ExifTool: {
+      path: '/exif-tool',
+      component: lazy(() => import(/* webpackChunkName: "exif-tool" */ './components/tools/ExifTool')),
+    },
+    CodeDiffTool: {
+      path: '/code-diff-tool',
+      component: lazy(() => import(/* webpackChunkName: "code-diff-tool" */ './components/tools/CodeDiffTool')),
+    },
+    LogFileAnalyzer: {
+      path: '/log-file-analyzer',
+      component: lazy(() => import(/* webpackChunkName: "log-file-analyzer" */ './components/tools/LogFileAnalyzer')),
+    },
+    ZipFileManager: {
+      path: '/zip-file-manager',
+      component: lazy(() => import(/* webpackChunkName: "zip-file-manager" */ './components/tools/ZipRarViewer')),
+    },
+    PasswordStrengthTester: {
+      path: '/password-strength-tester',
+      component: lazy(() => import(/* webpackChunkName: "password-strength-tester" */ './components/tools/PasswordStrengthTester')),
+    },
+    JWTGeneratorValidator: {
+      path: '/jwt-generator-validator',
+      component: lazy(() => import(/* webpackChunkName: "jwt-generator-validator" */ './components/tools/JWTGeneratorValidator')),
+    },
+    PDFSplitMergeTool: {
+      path: '/pdf-split-merge',
+      component: lazy(() => import(/* webpackChunkName: "pdf-split-merge" */ './components/tools/PDFSplitMergeTool')),
+    },
+    ImageFormatConverter: {
+      path: '/image-format-converter',
+      component: lazy(() => import(/* webpackChunkName: "image-format-converter" */ './components/tools/ImageFormatConverter')),
+    },
+    StrongPasswordGenerator: {
+      path: '/strong-password-generator',
+      component: lazy(() => import(/* webpackChunkName: "strong-password-generator" */ './components/tools/StrongPasswordGenerator')),
+    },
+    IpGeolocationFinder: {
+      path: '/ip-geolocation-finder',
+      component: lazy(() => import(/* webpackChunkName: "ip-geolocation-finder" */ './components/tools/IpGeolocationFinder')),
+    },
+    CSSGradientGenerator: {
+      path: '/css-gradient-generator',
+      component: lazy(() => import(/* webpackChunkName: "css-gradient-generator" */ './components/tools/CSSGradientGenerator')),
+    },
+    GlassmorphismGenerator: {
+      path: '/glassmorphism-generator',
+      component: lazy(() => import(/* webpackChunkName: "glassmorphism-generator" */ './components/tools/GlassmorphismGenerator')),
+    },
+    BoxShadowGenerator: {
+      path: '/box-shadow-generator',
+      component: lazy(() => import(/* webpackChunkName: "box-shadow-generator" */ './components/tools/BoxShadowGenerator')),
+    },
+    SvgIconConverter: {
+      path: '/svg-icon-converter',
+      component: lazy(() => import(/* webpackChunkName: "svg-icon-converter" */ './components/tools/SvgIconConverter')),
+    },
+    AsciiArtGenerator: {
+      path: '/ascii-art-generator',
+      component: lazy(() => import(/* webpackChunkName: "ascii-art-generator" */ './components/tools/AsciiArtGenerator')),
+    },
+    WorldClockTimezoneConverter: {
+      path: '/world-clock-timezone-converter',
+      component: lazy(() => import(/* webpackChunkName: "world-clock-timezone-converter" */ './components/tools/WorldClockTimezoneConverter')),
+    },
+    AgeCalculator: {
+      path: '/age-calculator',
+      component: lazy(() => import(/* webpackChunkName: "age-calculator" */ './components/tools/AgeCalculator')),
+    },
+    DateDifferenceCalculator: {
+      path: '/date-difference-calculator',
+      component: lazy(() => import(/* webpackChunkName: "date-difference-calculator" */ './components/tools/DateDifferenceCalculator')),
+    },
+    DomainNameGenerator: {
+      path: '/domain-name-generator',
+      component: lazy(() => import(/* webpackChunkName: "domain-name-generator" */ './components/tools/DomainNameGenerator')),
+    },
+    UnitConverter: {
+      path: '/unit-converter',
+      component: lazy(() => import(/* webpackChunkName: "unit-converter" */ './components/tools/UnitConverter')),
+    },
+    RecipeScaler: {
+      path: '/recipe-scaler',
+      component: lazy(() => import(/* webpackChunkName: "recipe-scaler" */ './components/tools/RecipeScaler')),
+    },
+    ExpenseSplitterTool: {
+      path: '/expense-splitter',
+      component: lazy(() => import(/* webpackChunkName: "expense-splitter" */ './components/tools/ExpenseSplitterTool')),
+    },
+    JsonBeautifierValidator: {
+      path: '/json-beautifier-validator',
+      component: lazy(() => import(/* webpackChunkName: "json-beautifier-validator" */ './components/tools/JsonBeautifierValidator')),
+    },
+    PingLatencyChecker: {
+      path: '/ping-latency-checker',
+      component: lazy(() => import(/* webpackChunkName: "ping-latency-checker" */ './components/tools/PingLatencyChecker')),
+    },
+    HttpRequestBuilder: {
+      path: '/http-request-builder',
+      component: lazy(() => import(/* webpackChunkName: "http-request-builder" */ './components/tools/HttpRequestBuilder')),
+    },
+    ContentReadabilityScore: {
+      path: '/content-readability-score',
+      component: lazy(() => import(/* webpackChunkName: "content-readability-score" */ './components/tools/ContentReadabilityScore')),
+    },
+    WebSocketTester: {
+      path: '/web-socket-tester',
+      component: lazy(() => import(/* webpackChunkName: "web-socket-tester" */ './components/tools/WebSocketTester')),
+    },
+    ImageEmbeddingCreator: {
+      path: '/image-embedding-creator',
+      component: lazy(() => import(/* webpackChunkName: "image-embedding-creator" */ './components/tools/ImageEmbeddingCreator')),
+    },
+    HtmlCssJsMinifier: {
+      path: '/html-css-js-minifier',
+      component: lazy(() => import(/* webpackChunkName: "html-css-js-minifier" */ './components/tools/HtmlCssJsMinifier')),
+    },
+    ColorContrastChecker: {
+      path: '/color-contrast-checker',
+      component: lazy(() => import(/* webpackChunkName: "color-contrast-checker" */ './components/tools/ColorContrastChecker')),
+    },
+    ImageToPixelArtGenerator: {
+      path: '/image-to-pixel-art-generator',
+      component: lazy(() => import(/* webpackChunkName: "image-to-pixel-art-generator" */ './components/tools/ImageToPixelArtGenerator')),
+    },
+    RssFeedChecker: {
+      path: '/rss-feed-checker',
+      component: lazy(() => import(/* webpackChunkName: "rss-feed-checker" */ './components/tools/RssFeedChecker')),
+    },
+    TwitterEmbedCreator: {
+      path: '/twitter-embed-creator',
+      component: lazy(() => import(/* webpackChunkName: "twitter-embed-creator" */ './components/tools/TwitterEmbedCreator')),
+    },
+    MorseCodeTranslator: {
+      path: '/morse-code-translator',
+      component: lazy(() => import(/* webpackChunkName: "morse-code-translator" */ './components/tools/MorseCodeTranslator')),
+    },
+    FileMetadataExtractorEditorViewer: {
+      path: '/file-metadata-extractor-editor-viewer',
+      component: lazy(() => import(/* webpackChunkName: "file-metadata-extractor-editor-viewer" */ './components/tools/FileMetadataExtractorEditorViewer')),
+    },
+    ChecklistTool: {
+      path: '/checklist-tool',
+      component: lazy(() => import(/* webpackChunkName: "checklist-tool" */ './components/tools/ChecklistCard')),
+    },
+    AudioPitchSpeedChanger: {
+      path: '/audio-pitch-speed-changer',
+      component: lazy(() => import(/* webpackChunkName: "audio-pitch-speed-changer" */ './components/tools/AudioPitchSpeedChanger')),
+    },
   },
   pages: {
     home: {
