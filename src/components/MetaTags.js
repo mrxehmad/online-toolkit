@@ -15,8 +15,8 @@ function MetaTags({
   section,
   tags
 }) {
-  const baseUrl = 'https://tools.ehmad.site'; // Replace with your actual domain
-  const fullUrl = `${baseUrl}${canonicalUrl}`;
+  const baseUrl = 'https://ehmi.se'; // Replace with your actual domain
+  const fullUrl = `${baseUrl}/tools${canonicalUrl}`;
   const fullTitle = `${title} | Online Toolkit`;
   
   // Default image if none provided

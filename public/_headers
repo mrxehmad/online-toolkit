@@ -1,14 +1,14 @@
-/static/*
+/tools/static/*
   Cache-Control: public, max-age=315360, immutable
 
-/*.js
+/tools/*.js
   Cache-Control: public, max-age=315360, immutable
 
-/*.css
+/tools/*.css
   Cache-Control: public, max-age=315360, immutable
 
-/*.png
+/tools/*.png
   Cache-Control: public, max-age=315360, immutable
 
-/*.jpg
+/tools/*.jpg
   Cache-Control: public, max-age=315360, immutable

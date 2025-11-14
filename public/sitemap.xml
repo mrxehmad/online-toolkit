@@ -6,368 +6,600 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://tools.ehmad.site/</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Core Pages -->
+  <!-- Tools -->
   <url>
-    <loc>https://tools.ehmad.site/contact</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/terms</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/privacy</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Finance Tools -->
-  <url>
-    <loc>https://tools.ehmad.site/mortgage-calculator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/browser-info-detector</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/investment-calculator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/crypto-converter</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/tax-calculator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/mortgage-calculator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/net-income-tax-calculator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/investment-calculator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/stock-crypto-tracker</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/currency-converter</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/emi-calculator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/tax-calculator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/roi-calculator</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- SEO Tools -->
-  <url>
-    <loc>https://tools.ehmad.site/seo-meta-generator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/code-formatter</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/twitter-card-generator</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/robots-txt-generator</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/xml-sitemap-generator</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/keyword-density-checker</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Cryptographic & Encoding Tools -->
-  <url>
-    <loc>https://tools.ehmad.site/crypto-converter</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/json-validator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/string-obfuscator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/curl-generator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/base64-converter</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/social-media-analyzer</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/base64-file-converter</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/hashtag-generator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/uuid-generator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/markdown-to-html</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/chmod-calculator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/wysiwyg-markdown-notes</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/yaml-formatter</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Developer Tools -->
-  <url>
-    <loc>https://tools.ehmad.site/browser-info-detector</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/net-income-tax-calculator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/code-formatter</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/pihole-regex-generator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/json-validator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/crontab-generator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/curl-generator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/uuid-generator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/markdown-to-html</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/port-generator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/wysiwyg-markdown-notes</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/docker-converter</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/pihole-regex-generator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/string-obfuscator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/pihole-regex-playground</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/crontab-generator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/base64-converter</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/port-generator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/chmod-calculator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/docker-converter</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/yaml-formatter</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/google-dork-generator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/admin</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/regex-playground</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Social Media Tools -->
-  <url>
-    <loc>https://tools.ehmad.site/social-media-analyzer</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/hashtag-generator</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Media Tools -->
-  <url>
-    <loc>https://tools.ehmad.site/screen-recorder</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/base64-file-converter</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/audio-recorder</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/google-dork-generator</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/youtube-thumbnail-downloader</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/webcam-tester</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/youtube-caption-downloader</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/screen-recorder</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/resume-builder</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/audio-recorder</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/image-compressor</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/youtube-thumbnail-downloader</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/video-gif-converter</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/youtube-caption-downloader</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/csv-to-excel</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/resume-builder</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/color-palette-generator</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/image-compressor</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tools.ehmad.site/csv-graphs</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/video-gif-converter</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Productivity & Utility Tools -->
   <url>
-    <loc>https://tools.ehmad.site/weather-dashboard</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/typing-test</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/pomodaro-timer</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/yt-embading</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/invoice-generator</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/flashcard-app</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/qrcode-generator</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/molecules-visualizer</loc>
-    <lastmod>2025-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tools.ehmad.site/webcam-tester</loc>
-    <lastmod>2025-04-05</lastmod>
+    <loc>https://ehmi.se/tools/csv-to-excel</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
+  <url>
+    <loc>https://ehmi.se/tools/color-palette-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/csv-graphs</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/regex-playground</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/weather-dashboard</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/stock-crypto-tracker</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/seo-meta-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/currency-converter</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/qrcode-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/molecules-visualizer</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/typing-test</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/pihole-regex-playground</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/pomodaro-timer</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/yt-embading</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/invoice-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/emi-calculator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/roi-calculator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/twitter-card-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/flashcard-app</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/robots-txt-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/xml-sitemap-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/keyword-density-checker</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/alt-text-finder</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/canonical-tag-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/hreflang-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/maps-embed-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/bmi-calculator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/favicon-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/exif-tool</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/code-diff-tool</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/log-file-analyzer</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/zip-file-manager</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/password-strength-tester</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/jwt-generator-validator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/pdf-split-merge</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/image-format-converter</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/strong-password-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/ip-geolocation-finder</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/css-gradient-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/glassmorphism-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/box-shadow-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/svg-icon-converter</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/ascii-art-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/world-clock-timezone-converter</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/age-calculator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/date-difference-calculator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/domain-name-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/unit-converter</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/recipe-scaler</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/expense-splitter</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/json-beautifier-validator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/ping-latency-checker</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/http-request-builder</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/content-readability-score</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/web-socket-tester</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/image-embedding-creator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/html-css-js-minifier</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/color-contrast-checker</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/image-to-pixel-art-generator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/rss-feed-checker</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/twitter-embed-creator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/morse-code-translator</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/file-metadata-extractor-editor-viewer</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/checklist-tool</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ehmi.se/tools/audio-pitch-speed-changer</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Pages -->
 </urlset>

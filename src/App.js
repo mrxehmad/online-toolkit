@@ -27,7 +27,7 @@ function ScrollToTop() {
 function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/tools">
         <ScrollToTop />
         <div className="flex flex-col min-h-screen">
           <Navbar />

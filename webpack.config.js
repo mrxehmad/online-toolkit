@@ -8,9 +8,10 @@ module.exports = {
   mode: 'production',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist/tools'),
     filename: '[name].[contenthash].js',
     chunkFilename: '[name].[contenthash].chunk.js',
+    publicPath: '/tools/',
     clean: true,
   },
   optimization: {
