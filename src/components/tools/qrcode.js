@@ -10,7 +10,6 @@ const QRCodeGenerator = () => {
   const [qrData, setQrData] = useState('');
   const [qrCodeUrl, setQrCodeUrl] = useState('');
   const [copied, setCopied] = useState(false);
-  const canvasRef = useRef(null);
 
   // QR Code types with their configurations
   const qrTypes = [

@@ -10,7 +10,6 @@ const TypingSpeedTest = () => {
   const [wpm, setWpm] = useState(0);
   const [accuracy, setAccuracy] = useState(100);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [errors, setErrors] = useState(0);
   const [totalTypedChars, setTotalTypedChars] = useState(0);
   const inputRef = useRef(null);
@@ -33,10 +32,9 @@ const TypingSpeedTest = () => {
     setWpm(0);
     setAccuracy(100);
     setCurrentWordIndex(0);
-    setCurrentCharIndex(0);
     setErrors(0);
     setTotalTypedChars(0);
-  }, []);
+  }, [sampleTexts]);
 
   useEffect(() => {
     initializeTest();
@@ -110,7 +108,6 @@ const TypingSpeedTest = () => {
     }
     
     setCurrentWordIndex(wordIndex);
-    setCurrentCharIndex(value.length - charCount);
 
     // Check if test is complete
     if (value === text) {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Play, Pause, RotateCcw, Settings, TrendingUp, Clock, Target, Zap } from 'lucide-react';
 
 const PomodoroTimer = () => {
@@ -30,7 +30,6 @@ const PomodoroTimer = () => {
   });
 
   const intervalRef = useRef(null);
-  const audioRef = useRef(null);
 
   // Timer logic
   useEffect(() => {
@@ -45,9 +44,9 @@ const PomodoroTimer = () => {
     }
     
     return () => clearInterval(intervalRef.current);
-  }, [isActive, isPaused, timeLeft]);
+  }, [isActive, isPaused, timeLeft, handleSessionComplete]);
 
-  const handleSessionComplete = () => {
+  const handleSessionComplete = useCallback(() => {
     // Play notification sound (browser notification sound)
     if ('Notification' in window && Notification.permission === 'granted') {
       new Notification('Pomodoro Complete!', {
@@ -83,7 +82,7 @@ const PomodoroTimer = () => {
     
     setIsActive(false);
     setIsPaused(false);
-  };
+  }, [currentSession, sessionCount, settings]);
 
   const toggleTimer = () => {
     if (!isActive) {

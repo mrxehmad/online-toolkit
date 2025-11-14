@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Play, Pause, RotateCw, Search, Info, Atom, Beaker, Zap, Eye, EyeOff, ZoomIn, ZoomOut, Maximize, Minimize } from 'lucide-react';
 
 const ChemistryMoleculeVisualizer = () => {
@@ -169,7 +169,7 @@ const ChemistryMoleculeVisualizer = () => {
   };
 
   // Draw molecule on canvas
-  const drawMolecule = () => {
+  const drawMolecule = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -238,16 +238,16 @@ const ChemistryMoleculeVisualizer = () => {
         ctx.fillText(atom.element, x, y);
       }
     });
-  };
+  }, [selectedMolecule, showLabels, zoomLevel]);
 
   // Animation loop
-  const animate = () => {
+  const animate = useCallback(() => {
     if (isRotating) {
       rotationRef.current += 0.02;
     }
     drawMolecule();
     animationRef.current = requestAnimationFrame(animate);
-  };
+  }, [isRotating, drawMolecule]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -263,7 +263,7 @@ const ChemistryMoleculeVisualizer = () => {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [selectedMolecule, isRotating, showLabels, zoomLevel]);
+  }, [selectedMolecule, isRotating, showLabels, zoomLevel, animate]);
 
   return (
     <div className="min-h-screen bg-gray-50">

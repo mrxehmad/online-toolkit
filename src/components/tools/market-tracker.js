@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { TrendingUp, TrendingDown, RefreshCw, Search, Star, DollarSign, BarChart3, ArrowUp, ArrowDown, Smartphone, Monitor, Tablet, Plus, X, AlertTriangle, Activity } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { TrendingUp, RefreshCw, Search, DollarSign, BarChart3, ArrowUp, ArrowDown, Smartphone, Monitor, Tablet, Plus, X, AlertTriangle, Activity } from 'lucide-react';
 
 const StockCryptoTracker = () => {
   const [watchedAssets, setWatchedAssets] = useState([]);
@@ -23,9 +23,9 @@ const StockCryptoTracker = () => {
     loadDefaultAssets();
     const interval = setInterval(updateWatchedAssets, 60000); // Update every minute
     return () => clearInterval(interval);
-  }, []);
+  }, [loadDefaultAssets, updateWatchedAssets]);
 
-  const loadDefaultAssets = async () => {
+  const loadDefaultAssets = useCallback(async () => {
     setLoading(true);
     const assets = [];
     
@@ -52,9 +52,9 @@ const StockCryptoTracker = () => {
     setWatchedAssets(assets);
     setLastUpdate(new Date());
     setLoading(false);
-  };
+  }, []);
 
-  const updateWatchedAssets = async () => {
+  const updateWatchedAssets = useCallback(async () => {
     if (watchedAssets.length === 0) return;
     
     const updatedAssets = [];
@@ -74,7 +74,7 @@ const StockCryptoTracker = () => {
     }
     setWatchedAssets(updatedAssets);
     setLastUpdate(new Date());
-  };
+  }, [watchedAssets]);
 
   const fetchStockData = async (symbol) => {
     try {
@@ -145,7 +145,7 @@ const StockCryptoTracker = () => {
     }
   };
 
-  const searchAssets = async (query) => {
+  const searchAssets = useCallback(async (query) => {
     if (!query.trim()) {
       setSearchResults([]);
       return;
@@ -257,7 +257,7 @@ const StockCryptoTracker = () => {
     }
     
     setSearchLoading(false);
-  };
+  }, [activeTab]);
 
   const addToWatchlist = (asset) => {
     const exists = watchedAssets.some(a => 
@@ -383,7 +383,7 @@ const StockCryptoTracker = () => {
     }, 500);
 
     return () => clearTimeout(timeoutId);
-  }, [searchTerm, activeTab]);
+  }, [searchTerm, activeTab, searchAssets]);
 
   const filteredWatchlist = watchedAssets.filter(asset => 
     activeTab === 'stocks' ? asset.type === 'stock' : asset.type === 'crypto'

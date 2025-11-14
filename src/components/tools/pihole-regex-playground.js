@@ -11,7 +11,6 @@ import {
   EyeOff,
   Copy,
   Download,
-  Upload,
   RefreshCw,
   AlertCircle,
   CheckCircle

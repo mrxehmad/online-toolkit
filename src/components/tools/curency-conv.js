@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, createContext } from 'react';
+import React, { useState, useEffect, useContext, createContext, useCallback } from 'react';
 import { FiSun, FiMoon, FiRefreshCw, FiTrendingUp, FiDollarSign, FiInfo, FiGlobe } from 'react-icons/fi';
 import { BsCurrencyExchange } from 'react-icons/bs';
 import { LuArrowUpDown } from "react-icons/lu";
@@ -72,7 +72,7 @@ const CurrencyConverter = () => {
   const [convertedAmount, setConvertedAmount] = useState(null);
 
   // Fetch exchange rates
-  const fetchExchangeRates = async () => {
+  const fetchExchangeRates = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
@@ -87,10 +87,10 @@ const CurrencyConverter = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [fromCurrency]);
 
   // Convert currency
-  const convertCurrency = () => {
+  const convertCurrency = useCallback(() => {
     if (!exchangeRates[toCurrency] || !amount) {
       setConvertedAmount(null);
       return;
@@ -98,7 +98,7 @@ const CurrencyConverter = () => {
     const rate = exchangeRates[toCurrency];
     const result = (parseFloat(amount) * rate).toFixed(2);
     setConvertedAmount(result);
-  };
+  }, [exchangeRates, toCurrency, amount]);
 
   // Swap currencies
   const swapCurrencies = () => {
@@ -108,11 +108,11 @@ const CurrencyConverter = () => {
 
   useEffect(() => {
     fetchExchangeRates();
-  }, [fromCurrency]);
+  }, [fetchExchangeRates]);
 
   useEffect(() => {
     convertCurrency();
-  }, [amount, toCurrency, exchangeRates]);
+  }, [convertCurrency]);
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'}`}>

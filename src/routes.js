@@ -1,4 +1,3 @@
-import path from 'path-browserify';
 import { lazy } from 'react';
 
 // Tool components with more granular splitting
