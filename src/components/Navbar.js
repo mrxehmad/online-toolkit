@@ -12,7 +12,6 @@ import {
   FaHome,
   FaBars,
   FaTimes,
-  FaPuzzlePiece,
   FaChevronDown,
 } from 'react-icons/fa';
 
@@ -97,22 +96,19 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link 
-            to="/" 
-            className={`flex items-center space-x-3 text-xl font-bold ${
-              darkMode 
-                ? 'bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent' 
-                : 'bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent'
-            } hover:opacity-90 transition-all duration-200`}
+          <a 
+            href="https://ehmi.se" 
+            className="flex items-center space-x-3 hover:opacity-90 transition-all duration-200"
           >
-            <FaPuzzlePiece className={`${darkMode ? 'text-purple-400' : 'text-purple-600'}`} />
-            <span>Toolkit Hub</span>
-          </Link>
+            <span className="text-2xl font-bold bg-black text-white dark:bg-white dark:text-black px-3 py-1 select-none">
+              EHMI
+            </span>
+          </a>
           
           {/* Desktop Menu - Simplified */}
           <div className="hidden lg:flex items-center space-x-2">
             <Link 
-              to="/" 
+              to="https://ehmi.se" 
               className={`flex items-center space-x-2 ${
                 darkMode 
                   ? 'text-gray-300 hover:text-white hover:bg-gray-700' 

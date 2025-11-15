@@ -45,7 +45,7 @@ function ContactUs() {
               <div>
                 <h3 className="font-medium mb-2">Email</h3>
                 <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  contact@ehmad.site
+                  hi@ehmi.se
                 </p>
               </div>
               <div>

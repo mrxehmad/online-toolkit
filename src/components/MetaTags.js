@@ -20,7 +20,7 @@ function MetaTags({
   const fullTitle = `${title} | Online Toolkit`;
   
   // Default image if none provided
-  const defaultImage = `${baseUrl}/images/og-default.jpg`;
+  const defaultImage = `${baseUrl}/tools/tools.png`;
   const metaImage = image ? `${baseUrl}${image}` : defaultImage;
   
   return (

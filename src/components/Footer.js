@@ -48,7 +48,7 @@ function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://ehmad.site/x"
+                  href="https://ehmi.se/x"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm hover:text-indigo-500 transition-colors"
@@ -68,7 +68,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="https://ehmad.site/linkedin"
+                  href="https://ehmi.se/linkedin"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm hover:text-indigo-500 transition-colors"
