@@ -6,6 +6,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import { routes } from './routes';
 import Home from './components/Home';
 import AdminDashboard from './components/AdminDashboard';
+import RouteMetaTags from './components/RouteMetaTags';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -28,6 +29,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router basename="/tools">
+        <RouteMetaTags />
         <ScrollToTop />
         <div className="flex flex-col min-h-screen">
           <Navbar />
