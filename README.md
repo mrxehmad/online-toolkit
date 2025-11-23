@@ -107,7 +107,7 @@ The application will be available at `http://localhost:3000`
 
 ## 🌐 Live Demo
 
-Visit [Online Toolkit](https://tools.ehmad.site/) to see the live version.
+Visit [Online Toolkit](https://ehmi.se/tools) to see the live version.
 
 ## 🎨 Features
 
@@ -130,10 +130,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-- Website: [ehmad.site](https://ehmad.site)
+- Website: [ehmi.se](https://ehmi.se)
 - GitHub: [@mrxehmad](https://github.com/mrxehmad)
-- X (Twitter): [ehmad.site/x](https://ehmad.site/x)
-- LinkedIn: [ehmad.site/linkedin](https://ehmad.site/linkedin)
+- X (Twitter): [ehmi.se/x](https://ehmi.se/x)
+- LinkedIn: [ehmi.se/linkedin](https://ehmi.se/linkedin)
 
 ## 🙏 Acknowledgments
 
