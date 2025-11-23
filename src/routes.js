@@ -207,46 +207,82 @@ export const routes = {
       path: '/box-shadow-generator',
       component: lazy(() => import(/* webpackChunkName: "box-shadow-generator" */ './components/tools/BoxShadowGenerator')),
     },
-    colorPaletteGenerator: {
-      path: '/color-palette-generator',
-      component: lazy(() => import(/* webpackChunkName: "color-palette-generator" */ './components/tools/color-palet')),
+    audioPitchSpeedChanger: {
+      path: '/audio-pitch-speed-changer',
+      component: lazy(() => import(/* webpackChunkName: "audio-pitch-speed" */ './components/tools/AudioPitchSpeedChanger')),
     },
-    csvGraphs: {
-      path: '/csv-graphs',
-      component: lazy(() => import(/* webpackChunkName: "csv-graphs" */ './components/tools/csvgraphs')),
+    worldClockTimezoneConverter: {
+      path: '/world-clock-timezone-converter',
+      component: lazy(() => import(/* webpackChunkName: "world-clock" */ './components/tools/WorldClockTimezoneConverter')),
     },
-    regexPlayground: {
-      path: '/regex-playground',
-      component: lazy(() => import(/* webpackChunkName: "regex-playground" */ './components/tools/regex-playground')),
+    asciiArtGenerator: {
+      path: '/ascii-art-generator',
+      component: lazy(() => import(/* webpackChunkName: "ascii-art" */ './components/tools/AsciiArtGenerator')),
     },
-    weatherDashboard: {
-      path: '/weather-dashboard',
-      component: lazy(() => import(/* webpackChunkName: "weather-dashboard" */ './components/tools/weatherapi')),
+    robotsTxtGenerator: {
+      path: '/robots-txt-generator',
+      component: lazy(() => import(/* webpackChunkName: "robots-txt" */ './components/tools/RobotsTxtGenerator')),
     },
-    stockCryptoTracker: {
-      path: '/stock-crypto-tracker',
-      component: lazy(() => import(/* webpackChunkName: "stock-crypto-tracker" */ './components/tools/CryptoConverter')),
+    checklistTool: {
+      path: '/checklist-tool',
+      component: lazy(() => import(/* webpackChunkName: "checklist" */ './components/tools/ChecklistCard')),
     },
-    seoMetaGenerator: {
-      path: '/seo-meta-generator',
-      component: lazy(() => import(/* webpackChunkName: "seo-meta-generator" */ './components/tools/meta-tag')),
+    unitConverter: {
+      path: '/unit-converter',
+      component: lazy(() => import(/* webpackChunkName: "unit-converter" */ './components/tools/UnitConverter')),
     },
-    currencyConverter: {
-      path: '/currency-converter',
-      component: lazy(() => import(/* webpackChunkName: "currency-converter" */ './components/tools/curency-conv')),
+    emiCalculator: {
+      path: '/emi-calculator',
+      component: lazy(() => import(/* webpackChunkName: "emi-calculator" */ './components/tools/EmiCalculator')),
     },
-    qrcodeGenerator: {
-      path: '/qrcode-generator',
-      component: lazy(() => import(/* webpackChunkName: "qrcode-generator" */ './components/tools/qrcode')),
+    dateDifferenceCalculator: {
+      path: '/date-difference-calculator',
+      component: lazy(() => import(/* webpackChunkName: "date-difference" */ './components/tools/DateDifferenceCalculator')),
     },
-    moleculesVisualizer: {
-      path: '/molecules-visualizer',
-      component: lazy(() => import(/* webpackChunkName: "molecules-visualizer" */ './components/tools/molecules-visual')),
+    twitterCardGenerator: {
+      path: '/twitter-card-generator',
+      component: lazy(() => import(/* webpackChunkName: "twitter-card" */ './components/tools/twitter-card-generator')),
     },
-    typingTest: {
-      path: '/typing-test',
-      component: lazy(() => import(/* webpackChunkName: "typing-test" */ './components/tools/typing-test')),
-    },  
+    fileMetadataExtractorEditorViewer: {
+      path: '/file-metadata-extractor-editor-viewer',
+      component: lazy(() => import(/* webpackChunkName: "file-metadata" */ './components/tools/FileMetadataExtractorEditorViewer')),
+    },
+    bmiCalculator: {
+      path: '/bmi-calculator',
+      component: lazy(() => import(/* webpackChunkName: "bmi-calculator" */ './components/tools/BMICalculator')),
+    },
+    ageCalculator: {
+      path: '/age-calculator',
+      component: lazy(() => import(/* webpackChunkName: "age-calculator" */ './components/tools/AgeCalculator')),
+    },
+    twitterEmbedCreator: {
+      path: '/twitter-embed-creator',
+      component: lazy(() => import(/* webpackChunkName: "twitter-embed" */ './components/tools/TwitterEmbedCreator')),
+    },
+    altTextFinder: {
+      path: '/alt-text-finder',
+      component: lazy(() => import(/* webpackChunkName: "alt-text" */ './components/tools/AltTextFinder')),
+    },
+    imageFormatConverter: {
+      path: '/image-format-converter',
+      component: lazy(() => import(/* webpackChunkName: "image-format" */ './components/tools/ImageFormatConverter')),
+    },
+    webSocketTester: {
+      path: '/web-socket-tester',
+      component: lazy(() => import(/* webpackChunkName: "websocket-tester" */ './components/tools/WebSocketTester')),
+    },
+    svgIconConverter: {
+      path: '/svg-icon-converter',
+      component: lazy(() => import(/* webpackChunkName: "svg-icon" */ './components/tools/SvgIconConverter')),
+    },
+    canonicalTagGenerator: {
+      path: '/canonical-tag-generator',
+      component: lazy(() => import(/* webpackChunkName: "canonical-tag" */ './components/tools/CanonicalTagGenerator')),
+    },
+    httpRequestBuilder: {
+      path: '/http-request-builder',
+      component: lazy(() => import(/* webpackChunkName: "http-request" */ './components/tools/HttpRequestBuilder')),
+    },
   },
   pages: {
     home: {
