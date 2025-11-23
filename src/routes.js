@@ -195,6 +195,58 @@ export const routes = {
       path: '/invoice-generator',
       component: lazy(() => import(/* webpackChunkName: "invoice" */ './components/tools/invoice')),
     },
+    cssGradientGenerator: {
+      path: '/css-gradient-generator',
+      component: lazy(() => import(/* webpackChunkName: "css-gradient-generator" */ './components/tools/CSSGradientGenerator')),
+    },
+    glassmorphismGenerator: {
+      path: '/glassmorphism-generator',
+      component: lazy(() => import(/* webpackChunkName: "glassmorphism-generator" */ './components/tools/GlassmorphismGenerator')),
+    },
+    boxShadowGenerator: {
+      path: '/box-shadow-generator',
+      component: lazy(() => import(/* webpackChunkName: "box-shadow-generator" */ './components/tools/BoxShadowGenerator')),
+    },
+    colorPaletteGenerator: {
+      path: '/color-palette-generator',
+      component: lazy(() => import(/* webpackChunkName: "color-palette-generator" */ './components/tools/color-palet')),
+    },
+    csvGraphs: {
+      path: '/csv-graphs',
+      component: lazy(() => import(/* webpackChunkName: "csv-graphs" */ './components/tools/csvgraphs')),
+    },
+    regexPlayground: {
+      path: '/regex-playground',
+      component: lazy(() => import(/* webpackChunkName: "regex-playground" */ './components/tools/regex-playground')),
+    },
+    weatherDashboard: {
+      path: '/weather-dashboard',
+      component: lazy(() => import(/* webpackChunkName: "weather-dashboard" */ './components/tools/weatherapi')),
+    },
+    stockCryptoTracker: {
+      path: '/stock-crypto-tracker',
+      component: lazy(() => import(/* webpackChunkName: "stock-crypto-tracker" */ './components/tools/CryptoConverter')),
+    },
+    seoMetaGenerator: {
+      path: '/seo-meta-generator',
+      component: lazy(() => import(/* webpackChunkName: "seo-meta-generator" */ './components/tools/meta-tag')),
+    },
+    currencyConverter: {
+      path: '/currency-converter',
+      component: lazy(() => import(/* webpackChunkName: "currency-converter" */ './components/tools/curency-conv')),
+    },
+    qrcodeGenerator: {
+      path: '/qrcode-generator',
+      component: lazy(() => import(/* webpackChunkName: "qrcode-generator" */ './components/tools/qrcode')),
+    },
+    moleculesVisualizer: {
+      path: '/molecules-visualizer',
+      component: lazy(() => import(/* webpackChunkName: "molecules-visualizer" */ './components/tools/molecules-visual')),
+    },
+    typingTest: {
+      path: '/typing-test',
+      component: lazy(() => import(/* webpackChunkName: "typing-test" */ './components/tools/typing-test')),
+    },  
   },
   pages: {
     home: {

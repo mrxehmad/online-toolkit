@@ -108,7 +108,7 @@ function Navbar() {
           {/* Desktop Menu - Simplified */}
           <div className="hidden lg:flex items-center space-x-2">
             <Link 
-              to="https://ehmi.se" 
+              to="/" 
               className={`flex items-center space-x-2 ${
                 darkMode 
                   ? 'text-gray-300 hover:text-white hover:bg-gray-700' 
