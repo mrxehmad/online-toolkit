@@ -283,6 +283,114 @@ export const routes = {
       path: '/http-request-builder',
       component: lazy(() => import(/* webpackChunkName: "http-request" */ './components/tools/HttpRequestBuilder')),
     },
+    faviconGenerator: {
+      path: '/favicon-generator',
+      component: lazy(() => import(/* webpackChunkName: "favicon-generator" */ './components/tools/FaviconGenerator')),
+    },
+    jwtGeneratorValidator: {
+      path: '/jwt-generator-validator',
+      component: lazy(() => import(/* webpackChunkName: "jwt-generator" */ './components/tools/JWTGeneratorValidator')),
+    },
+    recipeScaler: {
+      path: '/recipe-scaler',
+      component: lazy(() => import(/* webpackChunkName: "recipe-scaler" */ './components/tools/RecipeScaler')),
+    },
+    pingLatencyChecker: {
+      path: '/ping-latency-checker',
+      component: lazy(() => import(/* webpackChunkName: "ping-latency" */ './components/tools/PingLatencyChecker')),
+    },
+    pdfSplitMerge: {
+      path: '/pdf-split-merge',
+      component: lazy(() => import(/* webpackChunkName: "pdf-split-merge" */ './components/tools/PDFSplitMergeTool')),
+    },
+    ipGeolocationFinder: {
+      path: '/ip-geolocation-finder',
+      component: lazy(() => import(/* webpackChunkName: "ip-geolocation" */ './components/tools/IpGeolocationFinder')),
+    },
+    xmlSitemapGenerator: {
+      path: '/xml-sitemap-generator',
+      component: lazy(() => import(/* webpackChunkName: "xml-sitemap" */ './components/tools/XMLSitemapGenerator')),
+    },
+    jsonBeautifierValidator: {
+      path: '/json-beautifier-validator',
+      component: lazy(() => import(/* webpackChunkName: "json-beautifier" */ './components/tools/JsonBeautifierValidator')),
+    },
+    keywordDensityChecker: {
+      path: '/keyword-density-checker',
+      component: lazy(() => import(/* webpackChunkName: "keyword-density" */ './components/tools/KeywordDensityChecker')),
+    },
+    domainNameGenerator: {
+      path: '/domain-name-generator',
+      component: lazy(() => import(/* webpackChunkName: "domain-name" */ './components/tools/DomainNameGenerator')),
+    },
+    morseCodeTranslator: {
+      path: '/morse-code-translator',
+      component: lazy(() => import(/* webpackChunkName: "morse-code" */ './components/tools/MorseCodeTranslator')),
+    },
+    passwordStrengthTester: {
+      path: '/password-strength-tester',
+      component: lazy(() => import(/* webpackChunkName: "password-strength" */ './components/tools/PasswordStrengthTester')),
+    },
+    htmlCssJsMinifier: {
+      path: '/html-css-js-minifier',
+      component: lazy(() => import(/* webpackChunkName: "html-minifier" */ './components/tools/HtmlCssJsMinifier')),
+    },
+    colorContrastChecker: {
+      path: '/color-contrast-checker',
+      component: lazy(() => import(/* webpackChunkName: "color-contrast" */ './components/tools/ColorContrastChecker')),
+    },
+    flashcardApp: {
+      path: '/flashcard-app',
+      component: lazy(() => import(/* webpackChunkName: "flashcard" */ './components/tools/FlashcardApp')),
+    },
+    mapsEmbedGenerator: {
+      path: '/maps-embed-generator',
+      component: lazy(() => import(/* webpackChunkName: "maps-embed" */ './components/tools/MapsEmbedGenerator')),
+    },
+    imageEmbeddingCreator: {
+      path: '/image-embedding-creator',
+      component: lazy(() => import(/* webpackChunkName: "image-embedding" */ './components/tools/ImageEmbeddingCreator')),
+    },
+    contentReadabilityScore: {
+      path: '/content-readability-score',
+      component: lazy(() => import(/* webpackChunkName: "content-readability" */ './components/tools/ContentReadabilityScore')),
+    },
+    strongPasswordGenerator: {
+      path: '/strong-password-generator',
+      component: lazy(() => import(/* webpackChunkName: "strong-password" */ './components/tools/StrongPasswordGenerator')),
+    },
+    imageToPixelArtGenerator: {
+      path: '/image-to-pixel-art-generator',
+      component: lazy(() => import(/* webpackChunkName: "pixel-art" */ './components/tools/ImageToPixelArtGenerator')),
+    },
+    rssFeedChecker: {
+      path: '/rss-feed-checker',
+      component: lazy(() => import(/* webpackChunkName: "rss-feed" */ './components/tools/RssFeedChecker')),
+    },
+    expenseSplitter: {
+      path: '/expense-splitter',
+      component: lazy(() => import(/* webpackChunkName: "expense-splitter" */ './components/tools/ExpenseSplitterTool')),
+    },
+    roiCalculator: {
+      path: '/roi-calculator',
+      component: lazy(() => import(/* webpackChunkName: "roi-calculator" */ './components/tools/roi')),
+    },
+    zipFileManager: {
+      path: '/zip-file-manager',
+      component: lazy(() => import(/* webpackChunkName: "zip-file" */ './components/tools/ZipRarViewer')),
+    },
+    logFileAnalyzer: {
+      path: '/log-file-analyzer',
+      component: lazy(() => import(/* webpackChunkName: "log-analyzer" */ './components/tools/LogFileAnalyzer')),
+    },
+    hreflangGenerator: {
+      path: '/hreflang-generator',
+      component: lazy(() => import(/* webpackChunkName: "hreflang" */ './components/tools/HreflangGenerator')),
+    },
+    exifTool: {
+      path: '/exif-tool',
+      component: lazy(() => import(/* webpackChunkName: "exif-tool" */ './components/tools/ExifTool')),
+    },
   },
   pages: {
     home: {
