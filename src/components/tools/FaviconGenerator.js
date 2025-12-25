@@ -340,7 +340,7 @@ const FaviconGenerator = () => {
         <div className="text-center mb-12">
           <div className="flex justify-center items-center mb-6">
             <div className="bg-white rounded-full p-4 shadow-lg mr-4">
-              <Image />
+              <ImageIcon />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               Favicon Generator
@@ -380,7 +380,7 @@ const FaviconGenerator = () => {
                     : 'text-gray-600 hover:text-gray-800'
                 }`}
               >
-                <Image className="inline w-5 h-5 mr-2" />
+                <ImageIcon className="inline w-5 h-5 mr-2" />
                 From Image
               </button>
               <button
@@ -712,7 +712,7 @@ const FaviconGenerator = () => {
             ) : (
               <div className="text-center py-12">
                 <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Image />
+                  <ImageIcon />
                 </div>
                 <p className="text-gray-500">Upload an image or create letter icon to generate favicons</p>
               </div>
